@@ -1,0 +1,55 @@
+{
+ "slug": "gaming-pc",
+ "triangles": 38540,
+ "texture_px": 2048,
+ "triangles_light": 24724,
+ "texture_px_light": 1024,
+ "files": {
+  "glb": {
+   "name": "gaming-pc.glb",
+   "bytes": 2309348
+  },
+  "blend": {
+   "name": "gaming-pc.blend",
+   "bytes": 1563349
+  },
+  "fbx": {
+   "name": "gaming-pc.fbx",
+   "bytes": 3537676
+  },
+  "obj": {
+   "name": "gaming-pc-obj.zip",
+   "bytes": 1683993
+  },
+  "usdz": {
+   "name": "gaming-pc.usdz",
+   "bytes": 3375521
+  },
+  "glb_light": {
+   "name": "gaming-pc-light.glb",
+   "bytes": 1336428
+  },
+  "fbx_light": {
+   "name": "gaming-pc-light.fbx",
+   "bytes": 2271596
+  }
+ },
+ "extras": {
+  "license": "CC0-1.0",
+  "source": "grab3d.com",
+  "dimensions_m": "0.249 x 0.476 x 0.505",
+  "triangles": 38540,
+  "textures": "PBR 2048px: base color, roughness, metallic, normal (baked)",
+  "generator": "Created by grab3d",
+  "created": "2026-10-26",
+  "real_size": "glass tower gaming PC, approx. 240 x 480 x 512 mm",
+  "notes": "front faces -Y; dark case with tinted glass front and glass side panel (+X), white build inside: lavender motherboard, white heat sinks and I/O cover, four white RAM sticks with RGB light bars, AIO liquid cooler (pump head with light ring, two tubes, 360 mm radiator with three fans under the top), white graphics card with RGB edge, three bottom fans on the PSU shroud, rear exhaust fan, sleeved 24-pin cable; all seven fans with pastel RGB rings. Movable: glass side panel 'gaming-pc_side_panel' (origin on the rear hinge edge, rotates around Z, positive angle opens) and fan rotors 'gaming-pc_fan_1_rotor' to '_7_rotor' (origin at each hub; 1-6 spin around Z, 7 around Y). No text, no logos",
+  "set": "Cozy PC Parts Kit"
+ },
+ "origin": {
+  "method": "procedural",
+  "detail": "Built procedurally with Blender scripts. The scripts were written with the help of an AI coding assistant. No generative AI model produced the geometry or textures directly.",
+  "ai_content": false,
+  "ai_assisted_code": true
+ }
+}
