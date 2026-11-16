@@ -24,13 +24,18 @@
   </g>
   <path d="M484 521 668 460 680 477 496 543Z" fill="#3d4b56" stroke="#8b9eaa" stroke-opacity=".6" stroke-width="2"/>
   <path d="M495 542 680 477 679 502 496 565Z" fill="#101b25"/>
-  <path d="M496 545 679 480" stroke="url(#rim)" stroke-width="3"/>
+  <g data-boot="gpu-light" opacity=".04"><path d="M496 545 679 480" stroke="url(#rim)" stroke-width="3"/></g>
   <ellipse cx="562" cy="289" rx="41" ry="47" fill="#121e27" stroke="#4c6370" stroke-width="4" transform="rotate(-18 562 289)"/>
   <ellipse cx="562" cy="289" rx="25" ry="29" fill="none" stroke="#73858c" stroke-opacity=".5" stroke-width="5" transform="rotate(-18 562 289)"/>
-  <path d="M547 275 575 302M547 302 576 273" stroke="#73858c" stroke-opacity=".38" stroke-width="6"/>
+  <g data-boot="fan" transform="rotate(0 562 289)" opacity=".4">
+    <path d="M547 275 575 302M547 302 576 273M542 289 581 289" stroke="#73858c" stroke-opacity=".38" stroke-width="6"/>
+  </g>
+  <g data-boot="cooler-light" opacity="0"><ellipse cx="562" cy="289" rx="41" ry="47" fill="none" stroke="#00d9e8" stroke-width="2" transform="rotate(-18 562 289)"/></g>
   <!-- One continuous cyan signature line, not a RGB spectacle -->
-  <path d="M307 252 307 636" stroke="#00d9e8" stroke-width="3" stroke-linecap="round" opacity=".78"/>
-  <path d="M307 252 307 636" stroke="#00d9e8" stroke-width="13" opacity=".11"/>
+  <g data-boot="power-light" opacity=".08">
+    <path d="M307 252 307 636" stroke="#00d9e8" stroke-width="3" stroke-linecap="round" opacity=".78"/>
+    <path d="M307 252 307 636" stroke="#00d9e8" stroke-width="13" opacity=".11"/>
+  </g>
   <path d="M294 213 420 274" stroke="#b3cbd3" stroke-opacity=".26"/>
   <path d="M456 288 714 202" stroke="#b3cbd3" stroke-opacity=".28"/>
   <rect x="320" y="691" width="76" height="2" rx="1" fill="#8a99a6" opacity=".65" transform="rotate(25 320 691)"/>

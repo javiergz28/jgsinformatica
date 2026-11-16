@@ -30,3 +30,19 @@ h1 em{font-style:normal;color:#a3b1c0}.lead{max-width:28rem;color:#b7c0cd;font-s
 @media(max-width:1000px){.hero{grid-template-columns:1fr;gap:0;padding-top:10rem}.hero-content{z-index:2}.core{max-width:660px;width:90%;justify-self:center;margin-top:-2rem}.core img{width:100%;margin:0}.hero .scroll{bottom:1.5rem}.split{grid-template-columns:1fr}.section .copy{max-width:36rem}.location{margin:2.5rem 0 0}}
 @media(max-width:680px){.header{height:74px;gap:1rem}.header nav{gap:.85rem}.header nav>a:not(.nav-contact){display:none}.dev{display:none}.hero{padding:8.5rem var(--pad) 6rem;min-height:730px}h1{font-size:clamp(2.7rem,10vw,5.2rem);letter-spacing:-.08em;white-space:normal}.lead{max-width:25rem}.core{margin-top:-.5rem;width:100%}.location{font-size:.53rem}.scroll{font-size:.55rem}.section{min-height:auto}.section-label span:last-child{max-width:10rem;text-align:right}.split h2,.contact h2{font-size:clamp(2.7rem,9vw,4rem)}.service-list{grid-template-columns:1fr}.service-list div+div{border-left:0;border-top:1px solid #151b2444;padding-left:0}.contact-grid{grid-template-columns:1fr}.contact-grid a{min-height:125px}.footer{flex-wrap:wrap;font-size:.55rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* CP-002.1: scroll-driven BOOT with a single consistent SVG. */
+.boot-sequence{position:relative;height:180svh}
+.boot-sequence>.hero{position:sticky;top:0;height:100svh;min-height:0}
+.core-art{position:relative;isolation:isolate;transform-origin:50% 50%}
+.core-art>.core-vector{position:absolute;left:0;top:0;display:block;width:115%;height:auto;margin-left:-7%;pointer-events:none;filter:drop-shadow(35px 30px 50px #0009)}
+.core-art.is-enhanced>.core-poster{opacity:0}
+@media(max-width:1000px){
+  .boot-sequence{height:auto;min-height:0}
+  .boot-sequence>.hero{position:relative;height:auto;min-height:730px}
+  .core-art>.core-vector{width:100%;margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .boot-sequence{height:auto;min-height:0}
+  .boot-sequence>.hero{position:relative;height:auto;min-height:100svh}
+}

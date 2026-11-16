@@ -24,6 +24,7 @@
   <span class="dev">DEV 001</span>
 </header>
 <main id="contenido">
+  <div class="boot-sequence" data-boot-sequence>
   <section class="hero" id="inicio" aria-labelledby="hero-title">
     <div class="hero-content">
       <p class="eyebrow"><span class="signal"></span> 01 / SYSTEM BOOT</p>
@@ -36,11 +37,14 @@
       <p class="location">MONTEVIDEO, URUGUAY <span aria-hidden="true">·</span> JG SOLUCIONES INFORMÁTICAS</p>
     </div>
     <figure class="core">
-      <img src="./assets/core-01.svg" alt="CORE-01: concepto minimalista de computadora de grafito y vidrio ahumado, con una luz cian." width="900" height="850" fetchpriority="high" decoding="async">
-      <figcaption><span>CORE—01</span><span>ESTUDIO VISUAL / V01</span></figcaption>
+      <div class="core-art" data-core-art>
+        <img class="core-poster" src="./assets/core-01.svg" alt="CORE-01: computadora minimalista de grafito y vidrio ahumado con un indicador cian discreto." width="900" height="850" fetchpriority="high" decoding="async">
+      </div>
+      <figcaption><span>CORE—01</span><span data-boot-label aria-hidden="true">STANDBY / 00</span></figcaption>
     </figure>
     <a class="scroll" href="#servicios">DESLIZÁ PARA DESCUBRIR <span aria-hidden="true">↓</span></a>
   </section>
+  </div>
 
   <section id="servicios" class="section section-light" aria-labelledby="service-title">
     <div class="section-label"><span>02 / HARDWARE</span><span>EL PUNTO DE PARTIDA</span></div>

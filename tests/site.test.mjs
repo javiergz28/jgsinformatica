@@ -56,3 +56,33 @@ test("Assets locales y sin dependencias de compilación", () => {
   assert.match(svg, /<title /);
   assert.ok(statSync(join(root,"assets/core-01.svg")).size < 12000, "Hero too heavy");
 });
+
+test("BOOT has a reversible scroll stage without hiding navigation", () => {
+  assert.match(html, /class="boot-sequence" data-boot-sequence/);
+  assert.match(html, /class="core-art" data-core-art/);
+  assert.match(html, /data-boot-label aria-hidden="true"/);
+  assert.match(css, /\.boot-sequence\{position:relative;height:180svh\}/);
+  assert.match(css, /\.boot-sequence>\.hero\{position:sticky/);
+  assert.match(js, /addEventListener\("scroll", requestRender, \{ passive: true \}\)/);
+  assert.match(js, /requestAnimationFrame\(render\)/);
+  assert.doesNotMatch(js, /preventDefault\(|scrollTo\(/);
+});
+
+test("BOOT uses the same master SVG for static and enhanced states", () => {
+  const svg = read("assets/core-01.svg");
+  for(const part of ["power-light", "gpu-light", "cooler-light", "fan"]) {
+    assert.ok(svg.includes('data-boot="' + part + '"'), "Missing SVG control: " + part);
+  }
+  assert.match(js, /fetch\("\.\/assets\/core-01\.svg"/);
+  assert.match(js, /art\.append\(next\)/);
+  assert.match(js, /art\.classList\.add\("is-enhanced"\)/);
+  assert.match(js, /data-boot-progress|bootProgress/);
+});
+
+test("BOOT falls back cleanly under reduced motion, data savings or JS failure", () => {
+  assert.match(js, /reducedMotion\.matches \|\| saveData/);
+  assert.match(js, /art\.dataset\.bootFallback = "static"/);
+  assert.match(css, /@media\(prefers-reduced-motion:reduce\)[\s\S]*?\.boot-sequence/);
+  assert.match(html, /class="core-poster" src="\.\/assets\/core-01\.svg"/);
+  assert.match(html, /href="#contacto"/);
+});
