@@ -78,6 +78,24 @@
       cooling = next.querySelector('[data-boot="cooler-light"]');
       fan = next.querySelector('[data-boot="fan"]');
       if (![light, gpu, cooling, fan].every(Boolean)) throw new Error("CORE-01 parts missing");
+
+      // The same physical geometry and camera pose will feed HARDWARE.
+      // This is a verifiable handoff contract, not a completed 3D camera transition.
+      const hardware = document.getElementById("servicios");
+      const pose = next.getAttribute("data-camera-pose");
+      const focusPart = hardware?.dataset.focusPart;
+      const focus = Array.from(next.querySelectorAll("[data-part]"))
+        .find((part) => part.getAttribute("data-part") === focusPart);
+      const focusX = Number(focus?.getAttribute("data-focus-x"));
+      const focusY = Number(focus?.getAttribute("data-focus-y"));
+      if (pose !== sequence.dataset.cameraPose || pose !== hardware?.dataset.cameraPose ||
+          !focus || !Number.isFinite(focusX) || !Number.isFinite(focusY)) {
+        throw new Error("CORE-01 camera or geometry handoff contract mismatch");
+      }
+      art.dataset.handoffPose = pose;
+      art.dataset.handoffPart = focusPart;
+      art.dataset.handoffX = String(focusX);
+      art.dataset.handoffY = String(focusY);
       next.classList.add("core-vector");
       next.setAttribute("aria-hidden", "true");
       next.setAttribute("focusable", "false");

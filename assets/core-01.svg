@@ -1,43 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="850" viewBox="0 0 900 850" role="img" aria-labelledby="title desc">
-  <title id="title">CORE-01: concepto de computadora modular</title>
-  <desc id="desc">Gabinete oscuro con panel lateral de vidrio, un solo ventilador y acento cian discreto. Ilustración provisional para la fase DEV.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="850" viewBox="0 0 900 850"
+  data-model="CORE-01" data-geometry-version="2" data-camera-pose="three-quarter" role="img" aria-labelledby="title desc">
+  <title id="title">CORE-01 · computadora modular minimalista</title>
+  <desc id="desc">Gabinete negro de aspecto industrial con vidrio ahumado, una placa base, una GPU y un único ventilador. Una luz cian señala la activación. Geometría vectorial maestra del prototipo.</desc>
   <defs>
-    <linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#48515d"/><stop offset=".32" stop-color="#202934"/><stop offset="1" stop-color="#070b12"/></linearGradient>
-    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#24323b" stop-opacity=".55"/><stop offset="1" stop-color="#08151e" stop-opacity=".85"/></linearGradient>
-    <linearGradient id="rim" x1="0" x2="1"><stop stop-color="#00d9e8" stop-opacity="0"/><stop offset=".56" stop-color="#00d9e8" stop-opacity=".56"/><stop offset="1" stop-color="#5ce7f0" stop-opacity=".1"/></linearGradient>
-    <radialGradient id="halo"><stop stop-color="#00c4d8" stop-opacity=".19"/><stop offset="1" stop-color="#00c4d8" stop-opacity="0"/></radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#394650"/><stop offset=".47" stop-color="#1b2731"/><stop offset="1" stop-color="#081018"/></linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#192932"/><stop offset="1" stop-color="#08131c"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4f8292" stop-opacity=".13"/><stop offset=".51" stop-color="#1c3341" stop-opacity=".02"/><stop offset="1" stop-color="#263f4d" stop-opacity=".08"/></linearGradient>
+    <linearGradient id="rim" x1="0" x2="1"><stop stop-color="#00d9e8" stop-opacity="0"/><stop offset=".56" stop-color="#00d9e8" stop-opacity=".6"/><stop offset="1" stop-color="#5ce7f0" stop-opacity=".1"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#00c4d8" stop-opacity=".13"/><stop offset="1" stop-color="#00c4d8" stop-opacity="0"/></radialGradient>
     <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
   </defs>
-  <ellipse cx="505" cy="438" rx="335" ry="350" fill="url(#halo)"/>
-  <ellipse cx="490" cy="748" rx="236" ry="28" fill="#010305" opacity=".86" filter="url(#blur)"/>
-  <!-- One fixed chassis and continuous set of panels; no visual reassembly. -->
-  <path d="M280 198 568 116 727 181 440 278Z" fill="#3e4c58" stroke="#798d9c" stroke-opacity=".3"/>
-  <path d="M440 278 727 181 727 681 440 760Z" fill="url(#metal)" stroke="#687c87" stroke-opacity=".4" stroke-width="3"/>
-  <path d="M280 198 440 278 440 760 280 676Z" fill="#0f1821" stroke="#687c87" stroke-opacity=".5" stroke-width="3"/>
-  <path d="M296 233 425 296 425 718 296 648Z" fill="url(#glass)" stroke="#8aafb9" stroke-opacity=".2" stroke-width="2"/>
-  <path d="M461 293 705 210 705 660 461 735Z" fill="#0a131c" stroke="#405764" stroke-opacity=".35"/>
-  <path d="M474 308 694 233 694 644 474 710Z" fill="url(#glass)" stroke="#718591" stroke-opacity=".24"/>
-  <!-- Motherboard plane, single GPU and restrained cooling rings -->
-  <path d="M499 358 643 312 643 521 499 568Z" fill="#172831" stroke="#47616d" stroke-opacity=".45"/>
-  <g opacity=".56" fill="none" stroke="#6f8791" stroke-width="2">
-    <path d="M519 377 519 536M535 362 535 488M547 363 606 343M540 493 596 474M593 368 619 360 619 399M564 529 627 505"/>
+  <g data-part="environment" aria-hidden="true">
+    <ellipse cx="505" cy="438" rx="335" ry="350" fill="url(#halo)"/>
+    <ellipse cx="490" cy="748" rx="236" ry="28" fill="#010305" opacity=".82" filter="url(#blur)"/>
   </g>
-  <path d="M484 521 668 460 680 477 496 543Z" fill="#3d4b56" stroke="#8b9eaa" stroke-opacity=".6" stroke-width="2"/>
-  <path d="M495 542 680 477 679 502 496 565Z" fill="#101b25"/>
-  <g data-boot="gpu-light" opacity=".04"><path d="M496 545 679 480" stroke="url(#rim)" stroke-width="3"/></g>
-  <ellipse cx="562" cy="289" rx="41" ry="47" fill="#121e27" stroke="#4c6370" stroke-width="4" transform="rotate(-18 562 289)"/>
-  <ellipse cx="562" cy="289" rx="25" ry="29" fill="none" stroke="#73858c" stroke-opacity=".5" stroke-width="5" transform="rotate(-18 562 289)"/>
-  <g data-boot="fan" transform="rotate(0 562 289)" opacity=".4">
-    <path d="M547 275 575 302M547 302 576 273M542 289 581 289" stroke="#73858c" stroke-opacity=".38" stroke-width="6"/>
+  <!-- Permanent cabinet silhouette. Geometry and corner points are shared by every chapter. -->
+  <g data-part="chassis">
+    <path d="M280 198 568 116 727 181 440 278Z" fill="#39454e" stroke="#74818c" stroke-opacity=".5" stroke-width="2"/>
+    <path d="M280 198 440 278 440 760 280 676Z" fill="url(#side)" stroke="#71808a" stroke-opacity=".5" stroke-width="3"/>
+    <path d="M440 278 727 181 727 681 440 760Z" fill="url(#metal)" stroke="#738794" stroke-opacity=".48" stroke-width="3"/>
+    <path d="M291 218 430 284 430 737 291 658Z" fill="#0b1720" stroke="#30424e" stroke-opacity=".8"/>
+    <path d="M459 293 706 210 706 663 459 732Z" fill="#0b1620" stroke="#4d6370" stroke-opacity=".54"/>
+    <path d="M292 211 560 133 707 192" fill="none" stroke="#bdcbd0" stroke-opacity=".17" stroke-width="2"/>
+    <path d="M450 284 450 740" stroke="#d3e1e7" stroke-opacity=".08" stroke-width="3"/>
+    <path d="M295 654 433 730M465 720 702 648" stroke="#8c9aa5" stroke-opacity=".21" stroke-width="2"/>
+    <path d="M313 668 370 698M630 713 688 697" stroke="#111a21" stroke-width="5" stroke-linecap="round"/>
+    <path d="M328 237 388 265" stroke="#8196a1" stroke-opacity=".14" stroke-width="2"/>
   </g>
-  <g data-boot="cooler-light" opacity="0"><ellipse cx="562" cy="289" rx="41" ry="47" fill="none" stroke="#00d9e8" stroke-width="2" transform="rotate(-18 562 289)"/></g>
-  <!-- One continuous cyan signature line, not a RGB spectacle -->
-  <g data-boot="power-light" opacity=".08">
-    <path d="M307 252 307 636" stroke="#00d9e8" stroke-width="3" stroke-linecap="round" opacity=".78"/>
-    <path d="M307 252 307 636" stroke="#00d9e8" stroke-width="13" opacity=".11"/>
+  <!-- Realistic fixed interior: one board, one GPU, one cooling unit. -->
+  <g data-part="motherboard">
+    <path d="M499 352 645 305 645 541 499 588Z" fill="#14252e" stroke="#415664" stroke-opacity=".6" stroke-width="2"/>
+    <path d="M521 371 521 553M538 364 538 524M547 377 609 356M546 511 600 490" stroke="#506a72" stroke-opacity=".48" fill="none" stroke-width="2"/>
+    <path d="M616 354 631 349 631 391" stroke="#627883" stroke-opacity=".46" fill="none" stroke-width="2"/>
+    <path d="M544 430 565 423 565 477 544 483Z" fill="#243844" stroke="#627883" stroke-opacity=".28"/>
   </g>
-  <path d="M294 213 420 274" stroke="#b3cbd3" stroke-opacity=".26"/>
-  <path d="M456 288 714 202" stroke="#b3cbd3" stroke-opacity=".28"/>
-  <rect x="320" y="691" width="76" height="2" rx="1" fill="#8a99a6" opacity=".65" transform="rotate(25 320 691)"/>
-  <text x="472" y="755" fill="#adc3cf" opacity=".55" font-family="monospace" font-size="13" letter-spacing="4">CORE/01</text>
+  <g data-part="gpu" data-focus-x="585" data-focus-y="510">
+    <path d="M483 520 669 460 681 477 495 541Z" fill="#4c5b65" stroke="#8a9aa5" stroke-opacity=".62" stroke-width="2"/>
+    <path d="M495 541 681 477 680 507 495 568Z" fill="#111c26" stroke="#3c5661" stroke-opacity=".6"/>
+    <path d="M503 555 671 497" fill="none" stroke="#92a6af" stroke-opacity=".16" stroke-width="2"/>
+    <g data-boot="gpu-light" opacity=".04"><path d="M496 545 679 480" stroke="url(#rim)" stroke-width="3"/></g>
+  </g>
+  <g data-part="cooling" data-focus-x="562" data-focus-y="289">
+    <ellipse cx="562" cy="289" rx="41" ry="47" fill="#0d1a23" stroke="#4d6370" stroke-width="4" transform="rotate(-18 562 289)"/>
+    <ellipse cx="562" cy="289" rx="25" ry="29" fill="none" stroke="#7e9199" stroke-opacity=".38" stroke-width="5" transform="rotate(-18 562 289)"/>
+    <g data-boot="fan" transform="rotate(0 562 289)" opacity=".4"><path d="M547 275 575 302M547 302 576 273M542 289 581 289" stroke="#8aa0a8" stroke-opacity=".44" stroke-width="6"/></g>
+    <g data-boot="cooler-light" opacity="0"><ellipse cx="562" cy="289" rx="41" ry="47" fill="none" stroke="#00d9e8" stroke-width="2" transform="rotate(-18 562 289)"/></g>
+  </g>
+  <!-- Glass overlays follow the same cabinet planes; no floating parts. -->
+  <g data-part="glass">
+    <path d="M296 233 425 296 425 718 296 648Z" fill="url(#glass)" stroke="#9bb3bc" stroke-opacity=".2" stroke-width="2"/>
+    <path d="M474 308 694 233 694 644 474 710Z" fill="url(#glass)" stroke="#8497a2" stroke-opacity=".25" stroke-width="2"/>
+    <path d="M479 315 526 299 478 455" fill="none" stroke="#d5e3e9" stroke-opacity=".07" stroke-width="8"/>
+    <circle cx="478" cy="310" r="2.3" fill="#91a5b0" fill-opacity=".45"/>
+    <circle cx="692" cy="239" r="2.3" fill="#91a5b0" fill-opacity=".45"/>
+    <circle cx="478" cy="706" r="2.3" fill="#91a5b0" fill-opacity=".45"/>
+    <circle cx="691" cy="643" r="2.3" fill="#91a5b0" fill-opacity=".45"/>
+  </g>
+  <g data-part="power">
+    <g data-boot="power-light" opacity=".08">
+      <path d="M307 252 307 636" stroke="#00d9e8" stroke-width="3" stroke-linecap="round" opacity=".78"/>
+      <path d="M307 252 307 636" stroke="#00d9e8" stroke-width="13" opacity=".11"/>
+    </g>
+  </g>
+  <g data-part="identity">
+    <path d="M294 213 420 274M456 288 714 202" stroke="#b3cbd3" stroke-opacity=".23"/>
+    <text x="472" y="755" fill="#adc3cf" opacity=".55" font-family="monospace" font-size="13" letter-spacing="4">CORE/01</text>
+  </g>
 </svg>

@@ -86,3 +86,30 @@ test("BOOT falls back cleanly under reduced motion, data savings or JS failure",
   assert.match(html, /class="core-poster" src="\.\/assets\/core-01\.svg"/);
   assert.match(html, /href="#contacto"/);
 });
+
+test("CORE-01 is one canonical modular geometry with only essential hardware", () => {
+  const svg=read("assets/core-01.svg");
+  assert.match(svg, /data-model="CORE-01"/);
+  assert.match(svg, /data-geometry-version="2"/);
+  assert.match(svg, /viewBox="0 0 900 850"/);
+  for (const part of ["chassis", "glass", "motherboard", "gpu", "cooling", "power"]) {
+    const count = [...svg.matchAll(new RegExp('data-part="' + part + '"', "g"))].length;
+    assert.equal(count, 1, "Expected exactly one " + part);
+  }
+  assert.ok(Buffer.byteLength(svg) < 9000, "Core visual should remain lightweight");
+});
+
+test("BOOT and HARDWARE share camera pose and GPU focus in source geometry", () => {
+  const svg = read("assets/core-01.svg");
+  const pose = svg.match(/data-camera-pose="([^"]+)"/)?.[1];
+  assert.ok(pose, "The source geometry must provide a camera pose");
+  const sequencePose = html.match(/data-boot-sequence data-camera-pose="([^"]+)"/)?.[1];
+  const hardwarePose = html.match(/id="servicios"[^>]+data-camera-pose="([^"]+)"/)?.[1];
+  const part = html.match(/id="servicios"[^>]+data-focus-part="([^"]+)"/)?.[1];
+  assert.equal(sequencePose, pose);
+  assert.equal(hardwarePose, pose);
+  assert.equal(part, "gpu");
+  assert.match(svg, /data-part="gpu" data-focus-x="585" data-focus-y="510"/);
+  assert.match(js, /art\.dataset\.handoffPose = pose/);
+  assert.match(js, /camera or geometry handoff contract mismatch/);
+});
