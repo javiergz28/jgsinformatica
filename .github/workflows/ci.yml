@@ -5,13 +5,17 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
+
 concurrency:
   group: dev-ci-${{ github.ref }}
   cancel-in-progress: true
+
 jobs:
   check:
+    name: Verify site and accessibility baseline
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -23,3 +27,36 @@ jobs:
         run: node --check script.js
       - name: Test website requirements
         run: node --test tests/site.test.mjs
+
+  deploy:
+    name: Deploy validated DEV to GitHub Pages
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble clean static website
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site/assets
+          cp index.html styles.css script.js _site/
+          cp assets/core-01.svg _site/assets/
+          touch _site/.nojekyll
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
