@@ -61,24 +61,25 @@ test("BOOT has a reversible scroll stage without hiding navigation", () => {
   assert.match(html, /class="boot-sequence" data-boot-sequence/);
   assert.match(html, /class="core-art core-art-cycles" data-core-art/);
   assert.match(html, /data-boot-label aria-hidden="true"/);
-  assert.match(css, /\.boot-sequence\{position:relative;height:180svh\}/);
+  assert.match(css, /\.boot-sequence\{height:440svh/);
+  assert.match(css, /\.boot-sequence\{height:330svh/);
   assert.match(css, /\.boot-sequence>\.hero\{position:sticky/);
   assert.match(js, /addEventListener\("scroll", requestRender, \{ passive: true \}\)/);
   assert.match(js, /requestAnimationFrame\(render\)/);
   assert.doesNotMatch(js, /preventDefault\(|scrollTo\(/);
 });
 
-test("BOOT progressively displays three real Blender Cycles stages with one camera", () => {
+test("BOOT controls six real transparent Blender Cycles views with explicit scroll choreography", () => {
   assert.match(html, /data-boot-media="blender-cycles"/);
-  for (const path of ["core01-off.webp", "core01-charging.webp", "core01-powered.webp"]) {
+  for (const path of ["core01-off.webp", "core01-charging.webp", "core01-powered.webp", "core01-button.webp", "core01-glass.webp", "core01-interior.webp"]) {
     assert.ok(html.includes("./assets/boot/" + path), "Missing real Blender stage " + path);
   }
-  assert.match(js, /chargingAmount = smooth/);
-  assert.match(js, /poweredAmount = smooth/);
+  assert.match(js, /const charge = failedStages/);
+  assert.match(js, /const powered = hasWide/);
   assert.match(js, /--boot-charging/);
   assert.match(js, /--boot-powered/);
-  assert.match(html, /La cámara 3D interactiva sigue en desarrollo/);
-  assert.match(js, /not yet interactive 3D/);
+  assert.match(html, /el 3D continuo sigue en desarrollo/);
+  assert.match(js, /not a continuous 3D scene/);
 });
 
 test("BOOT respects reduced motion, Save-Data and a no-JS/failed-image fallback", () => {
@@ -112,30 +113,51 @@ test("BOOT and HARDWARE retain a real handoff contract without claiming live 3D"
   const part = html.match(/id="servicios"[^>]+data-focus-part="([^"]+)"/)?.[1];
   assert.equal(sequencePose, pose);
   assert.equal(hardwarePose, pose);
-  assert.equal(part, "gpu");
-  assert.match(js, /art\.dataset\.handoffPose = pose/);
+  assert.equal(part, "motherboard");
+  assert.match(js, /art\.dataset\.handoffPose = hardware\.dataset\.cameraPose/);
   assert.match(js, /art\.dataset\.handoffPart = hardware\.dataset\.focusPart/);
-  assert.match(js, /not yet interactive 3D/);
+  assert.match(js, /not a continuous 3D scene/);
 });
 
 test("real Blender sequence is source-backed, optimized and included in deploy", () => {
   const manifest = JSON.parse(read("assets/boot/manifest.json"));
   assert.equal(manifest.source_scene, "CORE-01-BOOT.blend");
-  assert.equal(manifest.checkpoint, "CP-003.3-C6.2");
+  assert.equal(manifest.checkpoint, "CP-003.3-C6.3 / DEV-003");
   assert.equal(manifest.render_engine, "CYCLES");
-  assert.equal(manifest.camera, "one fixed three-quarter QA Cycles camera");
-  assert.equal(manifest.frames.length, 3);
-  assert.deepEqual(manifest.frames.map(f => f.frame), [1,80,96]);
+  assert.equal(manifest.film_transparent, true);
+  assert.equal(manifest.studio_ground_hidden, true);
+  assert.equal(manifest.source_scene_modified, false);
+  assert.match(manifest.camera_sequence, /behind glass/);
+  assert.equal(manifest.frames.length, 6);
+  assert.deepEqual(manifest.frames.map(f => f.frame), [1,80,96,96,96,96]);
   for (const frame of manifest.frames) {
     const filename = "assets/boot/" + frame.file;
     assert.ok(existsSync(join(root,filename)),filename);
     const b = readFileSync(join(root,filename));
     assert.equal(b.subarray(0,4).toString("hex"), "52494646");
     assert.equal(b.subarray(8,12).toString("ascii"),"WEBP");
-    assert.ok(statSync(join(root,filename)).size < 700000, "Frame exceeds 700 KB: "+filename);
+    assert.ok(statSync(join(root,filename)).size < 300000, "Frame exceeds 300 KB: "+filename);
+    assert.match(frame.webp_sha256, /^[a-f0-9]{64}$/);
+    if (frame.camera_pose === "wide") assert.ok(frame.alpha_transparent_pixels > 100000);
     assert.equal(frame.width, 900);
     assert.equal(frame.height, 900);
     assert.match(frame.original_png_sha256, /^[a-f0-9]{64}$/);
   }
   assert.match(read(".github/workflows/ci.yml"), /cp assets\/boot\/\*\.webp assets\/boot\/manifest\.json/);
+});
+
+test("DEV-003 camera route truly targets the power button, glass and motherboard", () => {
+  assert.match(html, /data-boot-chapter="power-button-glass-core"/);
+  assert.match(html, /data-focus-part="motherboard"/);
+  for (const target of ["button","glass","interior"]) {
+    assert.match(html, new RegExp('data-boot-frame="' + target + '"'));
+    assert.ok(js.includes('"--boot-' + target + '"'));
+  }
+  assert.match(js, /smooth\(0\.72, 0\.765, progress\)/);
+  assert.match(js, /smooth\(0\.895, 0\.94, progress\)/);
+  assert.match(js, /sequence\.dataset\.bootPhase = phase/);
+  assert.match(js, /art\.dataset\.bootProgress = progress\.toFixed\(3\)/);
+  assert.match(css, /mask-image:none/);
+  assert.match(css, /\.boot-meter-fill/);
+  assert.doesNotMatch(js,/preventDefault|scrollTo\(/);
 });

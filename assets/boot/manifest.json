@@ -1,53 +1,129 @@
 {
-  "checkpoint": "CP-003.3-C6.2",
+  "checkpoint": "CP-003.3-C6.3 / DEV-003",
   "source_scene": "CORE-01-BOOT.blend",
   "source_scene_sha256": "222b84a7b6cb468376c3ce17784a13d9c92eddea6dc62c500a622e8fcf786607",
   "render_engine": "CYCLES",
-  "camera": "one fixed three-quarter QA Cycles camera",
-  "render_source_resolution": [
-    1600,
-    900
-  ],
-  "cropped_rectangle_xyxy": [
-    310,
-    0,
-    1210,
-    900
-  ],
-  "kind": "three pre-rendered Blender views for scroll-based visual staging; not interactive 3D",
+  "film_transparent": true,
+  "studio_ground_hidden": true,
+  "source_scene_modified": false,
+  "camera_sequence": "wide 1/80/96; powered physical button; glass approach; camera behind glass toward AIO motherboard",
+  "browser_motion": "CSS/JS continuous zoom and alpha crossfades between six real Blender Cycles frames. Not a live 3D canvas.",
+  "scroll_length_desktop": "440svh",
+  "scroll_length_mobile": "330svh",
   "frames": [
     {
       "frame": 1,
-      "label": "00",
+      "label": "off",
       "file": "core01-off.webp",
+      "bytes": 43482,
       "width": 900,
       "height": 900,
-      "bytes": 35852,
-      "webp_sha256": "a89fb3c770464f4829ae53d13919bac9562207b5d2ef4daebe53b364a57df729",
-      "original_png_sha256": "fb77b56ab9f5d0e1f15c7b4bf769210b57664275030b58e71ad9d1a0a942f9f3",
-      "cycles_samples": 72
+      "alpha_transparent_pixels": 349394,
+      "webp_sha256": "7984f48c0252f8d9c39938a0689244c6ce2db979108ddc8d640d84cd1d711139",
+      "original_png_sha256": "603798e3d15a77f808c1952900ca757ac31eff709fd39a058683757072f93fd2",
+      "camera_pose": "wide",
+      "crop_xyxy": [
+        310,
+        0,
+        1210,
+        900
+      ],
+      "note": "camera fixed exterior, computer fully off"
     },
     {
       "frame": 80,
-      "label": "50",
+      "label": "charging",
       "file": "core01-charging.webp",
+      "bytes": 46236,
       "width": 900,
       "height": 900,
-      "bytes": 38254,
-      "webp_sha256": "cc0f97f29e1e541e388fbcafab08b13e182c7c84d151ed348a0db1e91124499d",
-      "original_png_sha256": "2afc6c864ecabdd4a8314e127d39d66fbd9d59581cb7a0630aee1563261a0c1a",
-      "cycles_samples": 72
+      "alpha_transparent_pixels": 349394,
+      "webp_sha256": "c0bbcdc5765e3e55f5447d140d12d3a389c4bc47736bef1f1a625f266332b32d",
+      "original_png_sha256": "e4f351db513c3575db49eb65d427d951fbd42a7599f24a8c3f378b4f08ac3bde",
+      "camera_pose": "wide",
+      "crop_xyxy": [
+        310,
+        0,
+        1210,
+        900
+      ],
+      "note": "camera fixed exterior, cyan light charging"
     },
     {
       "frame": 96,
-      "label": "100",
+      "label": "powered",
       "file": "core01-powered.webp",
+      "bytes": 46750,
       "width": 900,
       "height": 900,
-      "bytes": 39402,
-      "webp_sha256": "8a34b0f88b8af48d40c92dbc2ad81a5d968bd535ff852ce44836a7a5ea63c83e",
-      "original_png_sha256": "18710e23a572c2b2f0477f6fb499663fedd00a81213e4bf89cf6a3ef75d4e0ed",
-      "cycles_samples": 128
+      "alpha_transparent_pixels": 349394,
+      "webp_sha256": "644b386575c3bd65b8158d8327deae3fdcde131b0c97823468ca78ec430d153a",
+      "original_png_sha256": "f8f9bfbbfa7660662def133e6db20b85a21f507f27a6054c788bdc8d5fb3b520",
+      "camera_pose": "wide",
+      "crop_xyxy": [
+        310,
+        0,
+        1210,
+        900
+      ],
+      "note": "camera fixed exterior, light full"
+    },
+    {
+      "frame": 96,
+      "label": "button",
+      "file": "core01-button.webp",
+      "bytes": 40458,
+      "width": 900,
+      "height": 900,
+      "alpha_transparent_pixels": 203513,
+      "webp_sha256": "0c38c45621353eeb08bf76e5b7c6742421d8e657affcadb4ae0e64ebcd97d376",
+      "original_png_sha256": "3e96a1650893dfd664ac98471d8a80ba56a0a5e96c07d7fa0839892ae10a8c64",
+      "camera_pose": "power-button",
+      "crop_xyxy": [
+        0,
+        0,
+        900,
+        900
+      ],
+      "note": "Blender camera points to physical power button at (.05555,-.2214,.50215)"
+    },
+    {
+      "frame": 96,
+      "label": "approach",
+      "file": "core01-glass.webp",
+      "bytes": 47690,
+      "width": 900,
+      "height": 900,
+      "alpha_transparent_pixels": 96504,
+      "webp_sha256": "1f10662edfb3023c2e0907901748ff3a7353b1b0e03ba0eb259cbda32173b8a6",
+      "original_png_sha256": "3f6f12e13902ad69e7f6bcbc5a2d62ff65c889d37d2baf08c5b15c289aedf4ef",
+      "camera_pose": "approach",
+      "crop_xyxy": [
+        50,
+        50,
+        950,
+        950
+      ],
+      "note": "Blender camera moves nearer smoked glass toward hardware"
+    },
+    {
+      "frame": 96,
+      "label": "interior",
+      "file": "core01-interior.webp",
+      "bytes": 51874,
+      "width": 900,
+      "height": 900,
+      "alpha_transparent_pixels": 0,
+      "webp_sha256": "87554385687f5f6a865781b941da956d3b45d967fb6c3b601b4cc45b2af68419",
+      "original_png_sha256": "392afe47fa45b90504b298704a838f90c42496bdf4f973e89cd323eea0f5e709",
+      "camera_pose": "inside-glass",
+      "crop_xyxy": [
+        50,
+        50,
+        950,
+        950
+      ],
+      "note": "Blender camera at x=.09 behind glass toward motherboard, RAM and AIO"
     }
   ]
 }
