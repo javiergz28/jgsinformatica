@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="preload" href="./assets/core-01.svg" as="image" type="image/svg+xml" fetchpriority="high">
+  <link rel="preload" href="./assets/boot/core01-off.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="./styles.css">
   <script src="./script.js" defer></script>
 </head>
@@ -21,7 +21,7 @@
   <nav aria-label="Principal">
     <a href="#servicios">Servicios</a><a href="#portfolio">Proyectos</a><a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
   </nav>
-  <span class="dev">DEV 001</span>
+  <span class="dev">DEV / CORE-01 C6.2</span>
 </header>
 <main id="contenido">
   <div class="boot-sequence" data-boot-sequence data-camera-pose="three-quarter">
@@ -37,10 +37,16 @@
       <p class="location">MONTEVIDEO, URUGUAY <span aria-hidden="true">·</span> JG SOLUCIONES INFORMÁTICAS</p>
     </div>
     <figure class="core">
-      <div class="core-art" data-core-art>
-        <img class="core-poster" src="./assets/core-01.svg" alt="CORE-01: computadora minimalista de grafito y vidrio ahumado con un indicador cian discreto." width="900" height="850" fetchpriority="high" decoding="async">
+      <div class="core-art core-art-cycles" data-core-art data-boot-media="blender-cycles">
+        <picture class="core-poster-frame">
+          <source srcset="./assets/boot/core01-off.webp" type="image/webp">
+          <img class="core-poster" src="./assets/core-01.svg" alt="CORE-01: modelo real de PC de grafito y vidrio, placa madre, refrigeración AIO, GPU y tres ventiladores inferiores." width="900" height="900" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="core-stage core-stage-charging" data-boot-frame="charging" src="./assets/boot/core01-charging.webp" alt="" aria-hidden="true" width="900" height="900" loading="eager" fetchpriority="low" decoding="async">
+        <img class="core-stage core-stage-powered" data-boot-frame="powered" src="./assets/boot/core01-powered.webp" alt="" aria-hidden="true" width="900" height="900" loading="eager" fetchpriority="low" decoding="async">
       </div>
-      <figcaption><span>CORE—01</span><span data-boot-label aria-hidden="true">STANDBY / 00</span></figcaption>
+      <figcaption><span>CORE—01 / BLENDER · DEV</span><span data-boot-label aria-hidden="true">STANDBY / 00</span></figcaption>
+      <p class="core-preview-note">Vista previa con renders reales de Blender Cycles. La cámara 3D interactiva sigue en desarrollo.</p>
     </figure>
     <a class="scroll" href="#servicios">DESLIZÁ PARA DESCUBRIR <span aria-hidden="true">↓</span></a>
   </section>
@@ -83,7 +89,7 @@
       <a href="https://javiergz28.github.io/JG-Soluciones-Informaticas/#contacto" target="_blank" rel="noopener noreferrer"><small>03 / FORMULARIO ACTUAL</small><strong>Enviar consulta</strong><span aria-hidden="true">↗</span></a>
       <a href="https://www.linkedin.com/in/javier-gutierrez-433096106/" target="_blank" rel="noopener noreferrer"><small>04 / PERFIL PROFESIONAL</small><strong>LinkedIn</strong><span aria-hidden="true">↗</span></a>
     </div>
-    <footer class="footer"><span>© 2026 JG SOLUCIONES INFORMÁTICAS</span><a href="#inicio">VOLVER ARRIBA ↑</a><span>PROTOTIPO DEV / SIN PUBLICAR</span></footer>
+    <footer class="footer"><span>© 2026 JG SOLUCIONES INFORMÁTICAS</span><a href="#inicio">VOLVER ARRIBA ↑</a><span>ENTORNO DEV / NO ES LIVE</span></footer>
   </section>
 </main>
 </body>

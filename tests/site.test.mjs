@@ -59,7 +59,7 @@ test("Assets locales y sin dependencias de compilación", () => {
 
 test("BOOT has a reversible scroll stage without hiding navigation", () => {
   assert.match(html, /class="boot-sequence" data-boot-sequence/);
-  assert.match(html, /class="core-art" data-core-art/);
+  assert.match(html, /class="core-art core-art-cycles" data-core-art/);
   assert.match(html, /data-boot-label aria-hidden="true"/);
   assert.match(css, /\.boot-sequence\{position:relative;height:180svh\}/);
   assert.match(css, /\.boot-sequence>\.hero\{position:sticky/);
@@ -68,22 +68,26 @@ test("BOOT has a reversible scroll stage without hiding navigation", () => {
   assert.doesNotMatch(js, /preventDefault\(|scrollTo\(/);
 });
 
-test("BOOT uses the same master SVG for static and enhanced states", () => {
-  const svg = read("assets/core-01.svg");
-  for(const part of ["power-light", "gpu-light", "cooler-light", "fan"]) {
-    assert.ok(svg.includes('data-boot="' + part + '"'), "Missing SVG control: " + part);
+test("BOOT progressively displays three real Blender Cycles stages with one camera", () => {
+  assert.match(html, /data-boot-media="blender-cycles"/);
+  for (const path of ["core01-off.webp", "core01-charging.webp", "core01-powered.webp"]) {
+    assert.ok(html.includes("./assets/boot/" + path), "Missing real Blender stage " + path);
   }
-  assert.match(js, /fetch\("\.\/assets\/core-01\.svg"/);
-  assert.match(js, /art\.append\(next\)/);
-  assert.match(js, /art\.classList\.add\("is-enhanced"\)/);
-  assert.match(js, /data-boot-progress|bootProgress/);
+  assert.match(js, /chargingAmount = smooth/);
+  assert.match(js, /poweredAmount = smooth/);
+  assert.match(js, /--boot-charging/);
+  assert.match(js, /--boot-powered/);
+  assert.match(html, /La cámara 3D interactiva sigue en desarrollo/);
+  assert.match(js, /not yet interactive 3D/);
 });
 
-test("BOOT falls back cleanly under reduced motion, data savings or JS failure", () => {
+test("BOOT respects reduced motion, Save-Data and a no-JS/failed-image fallback", () => {
   assert.match(js, /reducedMotion\.matches \|\| saveData/);
   assert.match(js, /art\.dataset\.bootFallback = "static"/);
   assert.match(css, /@media\(prefers-reduced-motion:reduce\)[\s\S]*?\.boot-sequence/);
+  assert.match(css, /@media\(prefers-reduced-motion:reduce\)\{\.core-art-cycles img\.core-stage\{display:none/);
   assert.match(html, /class="core-poster" src="\.\/assets\/core-01\.svg"/);
+  assert.match(html, /<picture class="core-poster-frame">/);
   assert.match(html, /href="#contacto"/);
 });
 
@@ -99,17 +103,39 @@ test("CORE-01 is one canonical modular geometry with only essential hardware", (
   assert.ok(Buffer.byteLength(svg) < 9000, "Core visual should remain lightweight");
 });
 
-test("BOOT and HARDWARE share camera pose and GPU focus in source geometry", () => {
+test("BOOT and HARDWARE retain a real handoff contract without claiming live 3D", () => {
   const svg = read("assets/core-01.svg");
   const pose = svg.match(/data-camera-pose="([^"]+)"/)?.[1];
-  assert.ok(pose, "The source geometry must provide a camera pose");
+  assert.ok(pose);
   const sequencePose = html.match(/data-boot-sequence data-camera-pose="([^"]+)"/)?.[1];
   const hardwarePose = html.match(/id="servicios"[^>]+data-camera-pose="([^"]+)"/)?.[1];
   const part = html.match(/id="servicios"[^>]+data-focus-part="([^"]+)"/)?.[1];
   assert.equal(sequencePose, pose);
   assert.equal(hardwarePose, pose);
   assert.equal(part, "gpu");
-  assert.match(svg, /data-part="gpu" data-focus-x="585" data-focus-y="510"/);
   assert.match(js, /art\.dataset\.handoffPose = pose/);
-  assert.match(js, /camera or geometry handoff contract mismatch/);
+  assert.match(js, /art\.dataset\.handoffPart = hardware\.dataset\.focusPart/);
+  assert.match(js, /not yet interactive 3D/);
+});
+
+test("real Blender sequence is source-backed, optimized and included in deploy", () => {
+  const manifest = JSON.parse(read("assets/boot/manifest.json"));
+  assert.equal(manifest.source_scene, "CORE-01-BOOT.blend");
+  assert.equal(manifest.checkpoint, "CP-003.3-C6.2");
+  assert.equal(manifest.render_engine, "CYCLES");
+  assert.equal(manifest.camera, "one fixed three-quarter QA Cycles camera");
+  assert.equal(manifest.frames.length, 3);
+  assert.deepEqual(manifest.frames.map(f => f.frame), [1,80,96]);
+  for (const frame of manifest.frames) {
+    const filename = "assets/boot/" + frame.file;
+    assert.ok(existsSync(join(root,filename)),filename);
+    const b = readFileSync(join(root,filename));
+    assert.equal(b.subarray(0,4).toString("hex"), "52494646");
+    assert.equal(b.subarray(8,12).toString("ascii"),"WEBP");
+    assert.ok(statSync(join(root,filename)).size < 700000, "Frame exceeds 700 KB: "+filename);
+    assert.equal(frame.width, 900);
+    assert.equal(frame.height, 900);
+    assert.match(frame.original_png_sha256, /^[a-f0-9]{64}$/);
+  }
+  assert.match(read(".github/workflows/ci.yml"), /cp assets\/boot\/\*\.webp assets\/boot\/manifest\.json/);
 });

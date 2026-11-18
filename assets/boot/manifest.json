@@ -1,0 +1,53 @@
+{
+  "checkpoint": "CP-003.3-C6.2",
+  "source_scene": "CORE-01-BOOT.blend",
+  "source_scene_sha256": "222b84a7b6cb468376c3ce17784a13d9c92eddea6dc62c500a622e8fcf786607",
+  "render_engine": "CYCLES",
+  "camera": "one fixed three-quarter QA Cycles camera",
+  "render_source_resolution": [
+    1600,
+    900
+  ],
+  "cropped_rectangle_xyxy": [
+    310,
+    0,
+    1210,
+    900
+  ],
+  "kind": "three pre-rendered Blender views for scroll-based visual staging; not interactive 3D",
+  "frames": [
+    {
+      "frame": 1,
+      "label": "00",
+      "file": "core01-off.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 35852,
+      "webp_sha256": "a89fb3c770464f4829ae53d13919bac9562207b5d2ef4daebe53b364a57df729",
+      "original_png_sha256": "fb77b56ab9f5d0e1f15c7b4bf769210b57664275030b58e71ad9d1a0a942f9f3",
+      "cycles_samples": 72
+    },
+    {
+      "frame": 80,
+      "label": "50",
+      "file": "core01-charging.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 38254,
+      "webp_sha256": "cc0f97f29e1e541e388fbcafab08b13e182c7c84d151ed348a0db1e91124499d",
+      "original_png_sha256": "2afc6c864ecabdd4a8314e127d39d66fbd9d59581cb7a0630aee1563261a0c1a",
+      "cycles_samples": 72
+    },
+    {
+      "frame": 96,
+      "label": "100",
+      "file": "core01-powered.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 39402,
+      "webp_sha256": "8a34b0f88b8af48d40c92dbc2ad81a5d968bd535ff852ce44836a7a5ea63c83e",
+      "original_png_sha256": "18710e23a572c2b2f0477f6fb499663fedd00a81213e4bf89cf6a3ef75d4e0ed",
+      "cycles_samples": 128
+    }
+  ]
+}

@@ -46,3 +46,15 @@ h1 em{font-style:normal;color:#a3b1c0}.lead{max-width:28rem;color:#b7c0cd;font-s
   .boot-sequence{height:auto;min-height:0}
   .boot-sequence>.hero{position:relative;height:auto;min-height:100svh}
 }
+
+
+/* CP-003.4 DEV — Real CORE-01 Cycles images: three aligned frames, same camera. */
+.core-art-cycles{--boot-charging:0;--boot-powered:0;aspect-ratio:1/1;width:116%;margin-left:-8%;overflow:hidden;-webkit-mask-image:radial-gradient(ellipse 80% 83% at 51% 52%,#000 59%,transparent 100%);mask-image:radial-gradient(ellipse 80% 83% at 51% 52%,#000 59%,transparent 100%)}
+.core-art-cycles .core-poster-frame{display:block;width:100%;height:100%}
+.core-art-cycles img.core-poster,.core-art-cycles img.core-stage{display:block;width:100%;height:100%;margin:0;object-fit:cover;object-position:center;filter:none}
+.core-art-cycles img.core-stage{position:absolute;inset:0;pointer-events:none}
+.core-art-cycles .core-stage-charging{opacity:var(--boot-charging)}
+.core-art-cycles .core-stage-powered{opacity:var(--boot-powered)}
+.core-preview-note{color:#8399aa;font:400 .63rem/1.5 var(--mono);margin:.55rem 0 0}
+@media(max-width:1000px){.core-art-cycles{width:100%;margin-left:0}}
+@media(prefers-reduced-motion:reduce){.core-art-cycles img.core-stage{display:none}}
