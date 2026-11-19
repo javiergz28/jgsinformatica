@@ -24,7 +24,9 @@ jobs:
         with:
           node-version: '24'
       - name: Check JavaScript syntax
-        run: node --check script.js
+        run: |
+          node --check script.js
+          node --check c6-6-preview.js
       - name: Test website requirements
         run: node --test tests/*.test.mjs
 
@@ -48,12 +50,14 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site/assets
-          cp index.html styles.css script.js _site/
+          cp index.html styles.css script.js c6-6-preview.html c6-6-preview.css c6-6-preview.js _site/
           cp assets/core-01.svg _site/assets/
           mkdir -p _site/assets/boot
           cp assets/boot/*.webp assets/boot/manifest.json _site/assets/boot/
           mkdir -p _site/assets/boot/sequence
           cp assets/boot/sequence/*.webp _site/assets/boot/sequence/
+          mkdir -p _site/assets/boot/c6-6
+          cp assets/boot/c6-6/*.webp assets/boot/c6-6/manifest.json _site/assets/boot/c6-6/
           touch _site/.nojekyll
       - name: Configure Pages
         uses: actions/configure-pages@v5
