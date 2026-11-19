@@ -1,0 +1,259 @@
+{
+  "version": "baseline C6.7 on C6.8",
+  "deviceEmulation": "Chrome CDP 3x CPU, 80ms RTT, 400000 bytes/s, not real device",
+  "results": [
+    {
+      "viewport": "mobile-440",
+      "checkpoints": [
+        {
+          "target": 0,
+          "p": 0,
+          "frame": 0,
+          "desired": 0,
+          "resourceRequests": 13,
+          "transferBytes": 317642,
+          "frameGaps": 26,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.2,
+          "p": 0.2,
+          "frame": 12,
+          "desired": 32,
+          "resourceRequests": 18,
+          "transferBytes": 439908,
+          "frameGaps": 53,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.42,
+          "p": 0.42,
+          "frame": 12,
+          "desired": 67,
+          "resourceRequests": 22,
+          "transferBytes": 549286,
+          "frameGaps": 80,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.58,
+          "p": 0.58,
+          "frame": 12,
+          "desired": 92,
+          "resourceRequests": 26,
+          "transferBytes": 728540,
+          "frameGaps": 108,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.7,
+          "p": 0.7,
+          "frame": 12,
+          "desired": 111,
+          "resourceRequests": 30,
+          "transferBytes": 879734,
+          "frameGaps": 135,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.84,
+          "p": 0.84,
+          "frame": 12,
+          "desired": 134,
+          "resourceRequests": 31,
+          "transferBytes": 930914,
+          "frameGaps": 162,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 1,
+          "p": 1,
+          "frame": 159,
+          "desired": 159,
+          "resourceRequests": 36,
+          "transferBytes": 1186724,
+          "frameGaps": 189,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.65,
+          "p": 0.651,
+          "frame": 109,
+          "desired": 104,
+          "resourceRequests": 40,
+          "transferBytes": 1394104,
+          "frameGaps": 214,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.35,
+          "p": 0.35,
+          "frame": 93,
+          "desired": 56,
+          "resourceRequests": 44,
+          "transferBytes": 1598478,
+          "frameGaps": 241,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0,
+          "p": 0.001,
+          "frame": 0,
+          "desired": 0,
+          "resourceRequests": 48,
+          "transferBytes": 1765984,
+          "frameGaps": 268,
+          "overflow": false,
+          "hasFilm": true
+        }
+      ],
+      "diagnostic": {
+        "rafSamples": 268,
+        "rafP50": 16.699999999999818,
+        "rafP95": 16.700000000000728,
+        "rafLongOver50": 0,
+        "longTasks": 0,
+        "longTaskTotalMs": 0,
+        "resourceRequests": 48,
+        "transferBytes": 1765984,
+        "jsHeapBytes": 1318124
+      }
+    },
+    {
+      "viewport": "desktop-1440",
+      "checkpoints": [
+        {
+          "target": 0,
+          "p": 0,
+          "frame": 0,
+          "desired": 0,
+          "resourceRequests": 14,
+          "transferBytes": 341442,
+          "frameGaps": 26,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.2,
+          "p": 0.2,
+          "frame": 0,
+          "desired": 32,
+          "resourceRequests": 18,
+          "transferBytes": 444228,
+          "frameGaps": 53,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.42,
+          "p": 0.42,
+          "frame": 0,
+          "desired": 67,
+          "resourceRequests": 22,
+          "transferBytes": 553606,
+          "frameGaps": 80,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.58,
+          "p": 0.58,
+          "frame": 0,
+          "desired": 92,
+          "resourceRequests": 26,
+          "transferBytes": 732860,
+          "frameGaps": 108,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.7,
+          "p": 0.7,
+          "frame": 0,
+          "desired": 111,
+          "resourceRequests": 31,
+          "transferBytes": 919082,
+          "frameGaps": 135,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.84,
+          "p": 0.84,
+          "frame": 0,
+          "desired": 134,
+          "resourceRequests": 33,
+          "transferBytes": 1021308,
+          "frameGaps": 162,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 1,
+          "p": 1,
+          "frame": 0,
+          "desired": 159,
+          "resourceRequests": 36,
+          "transferBytes": 1164852,
+          "frameGaps": 189,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.65,
+          "p": 0.651,
+          "frame": 109,
+          "desired": 104,
+          "resourceRequests": 41,
+          "transferBytes": 1449094,
+          "frameGaps": 214,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0.35,
+          "p": 0.35,
+          "frame": 64,
+          "desired": 56,
+          "resourceRequests": 45,
+          "transferBytes": 1656412,
+          "frameGaps": 240,
+          "overflow": false,
+          "hasFilm": true
+        },
+        {
+          "target": 0,
+          "p": 0.003,
+          "frame": 0,
+          "desired": 0,
+          "resourceRequests": 50,
+          "transferBytes": 1848910,
+          "frameGaps": 260,
+          "overflow": false,
+          "hasFilm": true
+        }
+      ],
+      "diagnostic": {
+        "rafSamples": 260,
+        "rafP50": 16.699999999999818,
+        "rafP95": 16.700000000000273,
+        "rafLongOver50": 0,
+        "longTasks": 0,
+        "longTaskTotalMs": 0,
+        "resourceRequests": 50,
+        "transferBytes": 1848910,
+        "jsHeapBytes": 1534119
+      }
+    }
+  ],
+  "errors": []
+}
