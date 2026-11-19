@@ -1,7 +1,7 @@
 name: JG Next Gen - DEV CI
 on:
   push:
-    branches: [main, "feature/**"]
+    branches: [main, "feature/**", "experiment/**"]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -29,6 +29,7 @@ jobs:
           node --check c6-6-preview.js
           node --check c6-7-preview.js
           node --check c6-8-preview.js
+          node --check tools/c6-8-performance-audit.cjs
       - name: Test website requirements
         run: node --test tests/*.test.mjs
 

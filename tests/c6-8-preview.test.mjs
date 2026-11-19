@@ -32,3 +32,13 @@ test('C6.8 deployment pipeline includes its isolated HTML and JS only',()=>{
   assert.match(ci,/c6-8-preview\.html c6-8-preview\.js _site/);
   assert.doesNotMatch(read('c6-8-preview.html'),/c6-8-preview.css/);
 });
+
+test('C6.8-B audit measures visible frame latency, fallback duration and HTTP failures',()=>{
+  const audit=read('tools/c6-8-performance-audit.cjs');
+  assert.match(audit,/firstNearMs/);
+  assert.match(audit,/hiddenMs/);
+  assert.match(audit,/visibleFarMs/);
+  assert.match(audit,/recoveries/);
+  assert.match(audit,/httpFailures/);
+  assert.match(audit,/assert\.equal\(httpFailures\.length,0/);
+});

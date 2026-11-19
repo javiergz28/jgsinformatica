@@ -1,0 +1,438 @@
+{
+  "version": "C6.8-B visible-frame audit (450ms cadence + held recovery)",
+  "route": "c6-7-preview.html",
+  "deviceEmulation": "Chrome CDP 3x CPU, 80ms RTT, 400000 bytes/s, not real device",
+  "limitations": "RAF sampling does not prove a painted frame or real-device performance; firstNearMs null is a right-censored timeout, not 0ms",
+  "results": [
+    {
+      "viewport": "mobile-440",
+      "checkpoints": [
+        {
+          "target": 0,
+          "p": 0,
+          "frame": 0,
+          "desired": 0,
+          "resourceRequests": 14,
+          "transferBytes": 341442,
+          "frameGaps": 13,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": 16,
+            "hiddenMs": 0,
+            "visibleFarMs": 0,
+            "samples": 14,
+            "finalError": 0
+          }
+        },
+        {
+          "target": 0.2,
+          "p": 0.2,
+          "frame": 8,
+          "desired": 32,
+          "resourceRequests": 18,
+          "transferBytes": 439908,
+          "frameGaps": 26,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 400,
+            "samples": 13,
+            "finalError": 24
+          }
+        },
+        {
+          "target": 0.42,
+          "p": 0.42,
+          "frame": 8,
+          "desired": 67,
+          "resourceRequests": 22,
+          "transferBytes": 549286,
+          "frameGaps": 40,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 433,
+            "samples": 14,
+            "finalError": 59
+          }
+        },
+        {
+          "target": 0.58,
+          "p": 0.58,
+          "frame": 8,
+          "desired": 92,
+          "resourceRequests": 26,
+          "transferBytes": 728540,
+          "frameGaps": 53,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 400,
+            "samples": 13,
+            "finalError": 84
+          }
+        },
+        {
+          "target": 0.7,
+          "p": 0.7,
+          "frame": 8,
+          "desired": 111,
+          "resourceRequests": 30,
+          "transferBytes": 879734,
+          "frameGaps": 67,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 433,
+            "samples": 14,
+            "finalError": 103
+          }
+        },
+        {
+          "target": 0.84,
+          "p": 0.84,
+          "frame": 8,
+          "desired": 134,
+          "resourceRequests": 30,
+          "transferBytes": 879734,
+          "frameGaps": 80,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 400,
+            "samples": 13,
+            "finalError": 126
+          }
+        },
+        {
+          "target": 1,
+          "p": 1,
+          "frame": 8,
+          "desired": 159,
+          "resourceRequests": 35,
+          "transferBytes": 1125504,
+          "frameGaps": 94,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 433,
+            "samples": 14,
+            "finalError": 151
+          }
+        },
+        {
+          "target": 0.65,
+          "p": 0.65,
+          "frame": 109,
+          "desired": 103,
+          "resourceRequests": 39,
+          "transferBytes": 1308750,
+          "frameGaps": 108,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 433,
+            "samples": 14,
+            "finalError": 6
+          }
+        },
+        {
+          "target": 0.35,
+          "p": 0.351,
+          "frame": 90,
+          "desired": 56,
+          "resourceRequests": 43,
+          "transferBytes": 1527854,
+          "frameGaps": 121,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 400,
+            "samples": 13,
+            "finalError": 34
+          }
+        },
+        {
+          "target": 0,
+          "p": 0,
+          "frame": 0,
+          "desired": 0,
+          "resourceRequests": 47,
+          "transferBytes": 1695360,
+          "frameGaps": 135,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": 377,
+            "hiddenMs": 0,
+            "visibleFarMs": 367,
+            "samples": 14,
+            "finalError": 0
+          }
+        }
+      ],
+      "recoveries": [
+        {
+          "target": 0.82,
+          "firstNearMs": 1091,
+          "hiddenMs": 0,
+          "visibleFarMs": 967,
+          "samples": 45,
+          "finalError": 0
+        },
+        {
+          "target": 0.23,
+          "firstNearMs": 989,
+          "hiddenMs": 0,
+          "visibleFarMs": 967,
+          "samples": 45,
+          "finalError": 1
+        }
+      ],
+      "diagnostic": {
+        "rafSamples": 225,
+        "rafP50": 33.30000000000018,
+        "rafP95": 33.400000000000546,
+        "rafLongOver50": 0,
+        "longTasks": 0,
+        "longTaskTotalMs": 0,
+        "resourceRequests": 72,
+        "transferBytes": 2761912,
+        "jsHeapBytes": 1552517
+      }
+    },
+    {
+      "viewport": "desktop-1440",
+      "checkpoints": [
+        {
+          "target": 0,
+          "p": 0,
+          "frame": 0,
+          "desired": 0,
+          "resourceRequests": 14,
+          "transferBytes": 341442,
+          "frameGaps": 13,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": 24,
+            "hiddenMs": 0,
+            "visibleFarMs": 0,
+            "samples": 13,
+            "finalError": 0
+          }
+        },
+        {
+          "target": 0.2,
+          "p": 0.2,
+          "frame": 0,
+          "desired": 32,
+          "resourceRequests": 18,
+          "transferBytes": 444228,
+          "frameGaps": 27,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 433,
+            "samples": 14,
+            "finalError": 32
+          }
+        },
+        {
+          "target": 0.42,
+          "p": 0.419,
+          "frame": 0,
+          "desired": 67,
+          "resourceRequests": 22,
+          "transferBytes": 553606,
+          "frameGaps": 40,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 400,
+            "samples": 13,
+            "finalError": 67
+          }
+        },
+        {
+          "target": 0.58,
+          "p": 0.58,
+          "frame": 0,
+          "desired": 92,
+          "resourceRequests": 26,
+          "transferBytes": 732860,
+          "frameGaps": 54,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 433,
+            "samples": 14,
+            "finalError": 92
+          }
+        },
+        {
+          "target": 0.7,
+          "p": 0.7,
+          "frame": 0,
+          "desired": 111,
+          "resourceRequests": 30,
+          "transferBytes": 884054,
+          "frameGaps": 67,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 400,
+            "samples": 13,
+            "finalError": 111
+          }
+        },
+        {
+          "target": 0.84,
+          "p": 0.84,
+          "frame": 0,
+          "desired": 134,
+          "resourceRequests": 30,
+          "transferBytes": 884054,
+          "frameGaps": 81,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 432,
+            "samples": 14,
+            "finalError": 134
+          }
+        },
+        {
+          "target": 1,
+          "p": 1,
+          "frame": 0,
+          "desired": 159,
+          "resourceRequests": 35,
+          "transferBytes": 1129824,
+          "frameGaps": 95,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 433,
+            "samples": 14,
+            "finalError": 159
+          }
+        },
+        {
+          "target": 0.65,
+          "p": 0.651,
+          "frame": 109,
+          "desired": 104,
+          "resourceRequests": 39,
+          "transferBytes": 1306334,
+          "frameGaps": 108,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 400,
+            "samples": 13,
+            "finalError": 6
+          }
+        },
+        {
+          "target": 0.35,
+          "p": 0.35,
+          "frame": 64,
+          "desired": 56,
+          "resourceRequests": 43,
+          "transferBytes": 1513106,
+          "frameGaps": 122,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": null,
+            "hiddenMs": 0,
+            "visibleFarMs": 433,
+            "samples": 14,
+            "finalError": 8
+          }
+        },
+        {
+          "target": 0,
+          "p": 0.001,
+          "frame": 0,
+          "desired": 0,
+          "resourceRequests": 47,
+          "transferBytes": 1680612,
+          "frameGaps": 135,
+          "overflow": false,
+          "hasFilm": true,
+          "timing": {
+            "firstNearMs": 425,
+            "hiddenMs": 0,
+            "visibleFarMs": 400,
+            "samples": 13,
+            "finalError": 0
+          }
+        }
+      ],
+      "recoveries": [
+        {
+          "target": 0.82,
+          "firstNearMs": 1004,
+          "hiddenMs": 0,
+          "visibleFarMs": 967,
+          "samples": 45,
+          "finalError": 0
+        },
+        {
+          "target": 0.23,
+          "firstNearMs": 636,
+          "hiddenMs": 0,
+          "visibleFarMs": 233,
+          "samples": 45,
+          "finalError": 1
+        }
+      ],
+      "diagnostic": {
+        "rafSamples": 225,
+        "rafP50": 33.30000000000018,
+        "rafP95": 33.400000000000546,
+        "rafLongOver50": 0,
+        "longTasks": 0,
+        "longTaskTotalMs": 0,
+        "resourceRequests": 72,
+        "transferBytes": 2744774,
+        "jsHeapBytes": 1788005
+      }
+    }
+  ],
+  "errors": [],
+  "httpFailures": []
+}
