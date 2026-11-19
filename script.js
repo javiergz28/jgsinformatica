@@ -171,15 +171,11 @@
     set("--boot-charging", charge);
     set("--boot-powered", power);
     set("--boot-seq-opacity", fade);
-    // The final interior image is fully opaque. Blend edge feathering in gradually
-    // instead of abruptly cropping the exterior as the camera crosses the glass.
-    const edgeBlend = smooth(0.54, 0.90, cameraT);
-    for (const [key, start, end] of [
-      ["--boot-mask-x", 70, 65], ["--boot-mask-y", 77, 65],
-      ["--boot-mask-core", 68, 55], ["--boot-mask-edge", 100, 75]
-    ]) {
-      sequence.style.setProperty(key, (start + (end - start) * edgeBlend).toFixed(2) + "%");
-    }
+    // Physically overscan the rendered view through the glass so square frame
+    // edges are outside the composition, without a visible circular vignette.
+    const overscan = smooth(0.48, 0.93, cameraT);
+    sequence.style.setProperty("--boot-canvas-scale", (1.08 + 0.67 * overscan).toFixed(3));
+    sequence.style.setProperty("--boot-canvas-mobile-scale", (1.02 + 0.20 * overscan).toFixed(3));
     set("--boot-copy-opacity", 1 - smooth(0.58, 0.77, progress));
     set("--boot-meta-opacity", 1 - smooth(0.64, 0.86, progress));
     set("--boot-shift-x", smooth(0.62, 0.85, progress));

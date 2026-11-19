@@ -199,10 +199,20 @@ test("DEV-005 camera sequence only preloads nearby frames", () => {
   assert.match(js, /\[-3, -2, -1, 8, 7, 6, 5, 4, 3, 2, 1, 0\]/);
 });
 
-test("DEV-005 cinematic canvas progressively feathers opaque interior edges", () => {
+test("DEV-006 cinematic frame overscans without circular vignette", () => {
   const css = read("styles.css");
   const js = read("script.js");
-  assert.match(css, /canvas\.core-motion-canvas\{[\s\S]*?mask-image:radial-gradient\(ellipse var\(--boot-mask-x\) var\(--boot-mask-y\)/);
-  assert.match(js, /const edgeBlend = smooth\(0\.54, 0\.90, cameraT\)/);
-  assert.match(js, /\["--boot-mask-edge", 100, 75\]/);
+  assert.match(css, /canvas\.core-motion-canvas\{[\s\S]*?transform:scale\(var\(--boot-canvas-scale\)\)/);
+  assert.match(css, /mask-composite:intersect/);
+  assert.doesNotMatch(css.split('canvas.core-motion-canvas{')[1]?.split('\n}')[0],/radial-gradient/);
+  assert.match(js, /--boot-canvas-scale/);
+});
+
+test("DEV-006 restricts overscan on mobile and preserves natural scroll", () => {
+  const js = read("script.js");
+  const css = read("styles.css");
+  assert.match(js, /--boot-canvas-mobile-scale/);
+  assert.match(css, /canvas\.core-motion-canvas\{transform:scale\(var\(--boot-canvas-mobile-scale,1\.02\)\)\}/);
+  assert.match(css, /\.boot-sequence \.core-art-cycles\{[^}]*overflow:visible/);
+  assert.doesNotMatch(js, /preventDefault\(/);
 });
