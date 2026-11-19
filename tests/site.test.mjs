@@ -188,3 +188,21 @@ test("C6.4 RAM cyan LED upgrade uses the same four existing physical memory bars
   assert.equal(last.camera_target[0],-.073);
   assert.ok(last.bytes>20000);
 });
+
+
+test("DEV-005 camera sequence only preloads nearby frames", () => {
+  const js = read("script.js");
+  const preload = js.split("function preload() {")[1]?.split("\n  function draw()")[0];
+  assert.ok(preload, "preload function should be present");
+  assert.match(preload, /i < 8; i \+= 1\) enqueue\(i\)/);
+  assert.doesNotMatch(preload, /i < TOTAL|enqueue\(TOTAL - 1\)/);
+  assert.match(js, /\[-3, -2, -1, 8, 7, 6, 5, 4, 3, 2, 1, 0\]/);
+});
+
+test("DEV-005 cinematic canvas progressively feathers opaque interior edges", () => {
+  const css = read("styles.css");
+  const js = read("script.js");
+  assert.match(css, /canvas\.core-motion-canvas\{[\s\S]*?mask-image:radial-gradient\(ellipse var\(--boot-mask-x\) var\(--boot-mask-y\)/);
+  assert.match(js, /const edgeBlend = smooth\(0\.54, 0\.90, cameraT\)/);
+  assert.match(js, /\["--boot-mask-edge", 100, 75\]/);
+});

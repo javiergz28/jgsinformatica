@@ -113,10 +113,8 @@
   function preload() {
     if (warmed) return;
     warmed = true;
-    // Sparse first, nearby on demand, then remaining frames. No need for all 56 to show the first.
-    for (let i = 0; i < TOTAL; i += 7) enqueue(i);
-    enqueue(TOTAL - 1);
-    for (let i = 0; i < TOTAL; i += 1) enqueue(i);
+    // Warm only the opening camera frames; don't fetch the entire film at 30% scroll.
+    for (let i = 0; i < 8; i += 1) enqueue(i);
   }
 
   function draw() {
@@ -157,8 +155,11 @@
     if (progress >= 0.30) preload();
     desired = Math.round(cameraT * (TOTAL - 1));
     if (warmed) {
-      enqueue(desired, true);
-      for (const offset of [-1, 1, -2, 2, -3, 3]) enqueue(desired + offset, true);
+      // Queue in reverse priority: the requested frame is loaded first, then
+      // upcoming frames and a short backwards buffer for reverse scroll.
+      for (const offset of [-3, -2, -1, 8, 7, 6, 5, 4, 3, 2, 1, 0]) {
+        enqueue(desired + offset, true);
+      }
     }
     const drawn = progress >= 0.48 && draw();
     const fade = drawn && !poweredFailed ? smooth(0.49, 0.53, progress) : 0;
@@ -170,6 +171,15 @@
     set("--boot-charging", charge);
     set("--boot-powered", power);
     set("--boot-seq-opacity", fade);
+    // The final interior image is fully opaque. Blend edge feathering in gradually
+    // instead of abruptly cropping the exterior as the camera crosses the glass.
+    const edgeBlend = smooth(0.54, 0.90, cameraT);
+    for (const [key, start, end] of [
+      ["--boot-mask-x", 70, 65], ["--boot-mask-y", 77, 65],
+      ["--boot-mask-core", 68, 55], ["--boot-mask-edge", 100, 75]
+    ]) {
+      sequence.style.setProperty(key, (start + (end - start) * edgeBlend).toFixed(2) + "%");
+    }
     set("--boot-copy-opacity", 1 - smooth(0.58, 0.77, progress));
     set("--boot-meta-opacity", 1 - smooth(0.64, 0.86, progress));
     set("--boot-shift-x", smooth(0.62, 0.85, progress));
