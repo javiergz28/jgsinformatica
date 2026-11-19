@@ -142,3 +142,5 @@ body:not(.has-motion-sequence) .core-motion-canvas{display:none}
 /* C6.6: independent preview link, never replaces approved homepage content. */
 .core-preview-link{display:inline-block;margin:.55rem 0 0;color:#a5e7ec;border-bottom:1px solid #00d9e855;font:400 .66rem/1.6 var(--mono);text-decoration:none;letter-spacing:.025em}
 .core-preview-link:hover{color:#f5fcfe;border-bottom-color:var(--cyan)}
+
+.core-previous-link{color:#6b8592;border-bottom-color:#36505d;margin-left:1rem}
