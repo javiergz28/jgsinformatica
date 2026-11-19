@@ -52,6 +52,8 @@ jobs:
           cp assets/core-01.svg _site/assets/
           mkdir -p _site/assets/boot
           cp assets/boot/*.webp assets/boot/manifest.json _site/assets/boot/
+          mkdir -p _site/assets/boot/sequence
+          cp assets/boot/sequence/*.webp _site/assets/boot/sequence/
           touch _site/.nojekyll
       - name: Configure Pages
         uses: actions/configure-pages@v5

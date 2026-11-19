@@ -108,3 +108,29 @@ h1 em{font-style:normal;color:#a3b1c0}.lead{max-width:28rem;color:#b7c0cd;font-s
  .boot-sequence .core-art-cycles .core-stage{display:none!important}
  .boot-meter{display:none}
 }
+
+
+/* DEV-004 | 56 real sequential Cycles camera frames, not photographic dissolves. */
+.boot-sequence{height:580svh;--boot-seq-opacity:0}
+.boot-sequence .core-art-cycles{transform:translate3d(calc(var(--boot-shift-x) * -18vw),calc(var(--boot-shift-y) * -2vh),0) scale(1);transform-origin:50% 50%;-webkit-mask-image:none;mask-image:none}
+.boot-sequence .core-art-cycles canvas.core-motion-canvas{
+ position:absolute;inset:0;display:block;width:100%;height:100%;
+ opacity:var(--boot-seq-opacity);pointer-events:none;z-index:2;
+ -webkit-mask-image:radial-gradient(ellipse 70% 77% at 50% 50%,#000 68%,transparent 100%);
+ mask-image:radial-gradient(ellipse 70% 77% at 50% 50%,#000 68%,transparent 100%);
+}
+@media(max-width:1000px){
+ .boot-sequence{height:430svh}
+ .boot-sequence .core-art-cycles{
+   transform:translate3d(calc(var(--boot-shift-x) * -3vw),calc(var(--boot-shift-y) * -9vh),0) scale(1);
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .boot-sequence{height:auto;min-height:0}
+ .boot-sequence .core-art-cycles canvas.core-motion-canvas{display:none!important}
+}
+
+/* No-JS, reduced-motion, connection-constrained: no giant blank pinned scroll. */
+body:not(.has-motion-sequence) .boot-sequence{height:auto;min-height:0}
+body:not(.has-motion-sequence) .boot-sequence>.hero{position:relative;height:auto;min-height:100svh}
+body:not(.has-motion-sequence) .core-motion-canvas{display:none}

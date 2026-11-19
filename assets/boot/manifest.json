@@ -1,129 +1,1363 @@
 {
-  "checkpoint": "CP-003.3-C6.3 / DEV-003",
+  "checkpoint": "CP-003.3-C6.4 / DEV-004",
   "source_scene": "CORE-01-BOOT.blend",
-  "source_scene_sha256": "222b84a7b6cb468376c3ce17784a13d9c92eddea6dc62c500a622e8fcf786607",
+  "source_scene_sha256": "30b3483d07fe039da4a1df884b75bce09fe639172c9f4d6ddfa79f945cce21a4",
+  "previous_scene_sha256": "222b84a7b6cb468376c3ce17784a13d9c92eddea6dc62c500a622e8fcf786607",
+  "source_modified": true,
   "render_engine": "CYCLES",
   "film_transparent": true,
   "studio_ground_hidden": true,
-  "source_scene_modified": false,
-  "camera_sequence": "wide 1/80/96; powered physical button; glass approach; camera behind glass toward AIO motherboard",
-  "browser_motion": "CSS/JS continuous zoom and alpha crossfades between six real Blender Cycles frames. Not a live 3D canvas.",
-  "scroll_length_desktop": "440svh",
-  "scroll_length_mobile": "330svh",
-  "frames": [
+  "visual_upgrades": "Four existing RAM cyan LED lightbars strengthened (dynamic .72x original strength, 1.62 at f96), graphite heatsink rails; refined AIO optical cyan perimeter and faceplate microtexture; dark satin graphite roof; no geometry added or removed",
+  "website_technique": "Real continuous Blender camera spline pre-rendered into scrub-able 56-frame image sequence on canvas; not browser 3D",
+  "still_frames": [
     {
       "frame": 1,
       "label": "off",
       "file": "core01-off.webp",
-      "bytes": 43482,
+      "bytes": 41568,
       "width": 900,
       "height": 900,
-      "alpha_transparent_pixels": 349394,
-      "webp_sha256": "7984f48c0252f8d9c39938a0689244c6ce2db979108ddc8d640d84cd1d711139",
-      "original_png_sha256": "603798e3d15a77f808c1952900ca757ac31eff709fd39a058683757072f93fd2",
-      "camera_pose": "wide",
-      "crop_xyxy": [
-        310,
-        0,
-        1210,
-        900
-      ],
-      "note": "camera fixed exterior, computer fully off"
+      "png_sha256": "1bb5f9562d68c76231a4cbee857e7f1637fbbbc7150116496a95e3e6cc159833",
+      "webp_sha256": "94b317baed5bb2ef521b7316be09c69462e812d464a6c40392841c057d587c5a",
+      "alpha_zero_count": 349531
     },
     {
       "frame": 80,
       "label": "charging",
       "file": "core01-charging.webp",
-      "bytes": 46236,
+      "bytes": 44930,
       "width": 900,
       "height": 900,
-      "alpha_transparent_pixels": 349394,
-      "webp_sha256": "c0bbcdc5765e3e55f5447d140d12d3a389c4bc47736bef1f1a625f266332b32d",
-      "original_png_sha256": "e4f351db513c3575db49eb65d427d951fbd42a7599f24a8c3f378b4f08ac3bde",
-      "camera_pose": "wide",
-      "crop_xyxy": [
-        310,
-        0,
-        1210,
-        900
-      ],
-      "note": "camera fixed exterior, cyan light charging"
+      "png_sha256": "9e9a312f50eac0237159e5147fd177402075d72e2a853c37fca79b16de609b41",
+      "webp_sha256": "8d69b0162b1057b1d0ee747f9856a5ad51eb18c441d81e32bc9c25521a22b261",
+      "alpha_zero_count": 349531
     },
     {
       "frame": 96,
       "label": "powered",
       "file": "core01-powered.webp",
-      "bytes": 46750,
+      "bytes": 45748,
       "width": 900,
       "height": 900,
-      "alpha_transparent_pixels": 349394,
-      "webp_sha256": "644b386575c3bd65b8158d8327deae3fdcde131b0c97823468ca78ec430d153a",
-      "original_png_sha256": "f8f9bfbbfa7660662def133e6db20b85a21f507f27a6054c788bdc8d5fb3b520",
-      "camera_pose": "wide",
-      "crop_xyxy": [
-        310,
-        0,
-        1210,
-        900
-      ],
-      "note": "camera fixed exterior, light full"
-    },
-    {
-      "frame": 96,
-      "label": "button",
-      "file": "core01-button.webp",
-      "bytes": 40458,
-      "width": 900,
-      "height": 900,
-      "alpha_transparent_pixels": 203513,
-      "webp_sha256": "0c38c45621353eeb08bf76e5b7c6742421d8e657affcadb4ae0e64ebcd97d376",
-      "original_png_sha256": "3e96a1650893dfd664ac98471d8a80ba56a0a5e96c07d7fa0839892ae10a8c64",
-      "camera_pose": "power-button",
-      "crop_xyxy": [
-        0,
-        0,
-        900,
-        900
-      ],
-      "note": "Blender camera points to physical power button at (.05555,-.2214,.50215)"
-    },
-    {
-      "frame": 96,
-      "label": "approach",
-      "file": "core01-glass.webp",
-      "bytes": 47690,
-      "width": 900,
-      "height": 900,
-      "alpha_transparent_pixels": 96504,
-      "webp_sha256": "1f10662edfb3023c2e0907901748ff3a7353b1b0e03ba0eb259cbda32173b8a6",
-      "original_png_sha256": "3f6f12e13902ad69e7f6bcbc5a2d62ff65c889d37d2baf08c5b15c289aedf4ef",
-      "camera_pose": "approach",
-      "crop_xyxy": [
-        50,
-        50,
-        950,
-        950
-      ],
-      "note": "Blender camera moves nearer smoked glass toward hardware"
-    },
-    {
-      "frame": 96,
-      "label": "interior",
-      "file": "core01-interior.webp",
-      "bytes": 51874,
-      "width": 900,
-      "height": 900,
-      "alpha_transparent_pixels": 0,
-      "webp_sha256": "87554385687f5f6a865781b941da956d3b45d967fb6c3b601b4cc45b2af68419",
-      "original_png_sha256": "392afe47fa45b90504b298704a838f90c42496bdf4f973e89cd323eea0f5e709",
-      "camera_pose": "inside-glass",
-      "crop_xyxy": [
-        50,
-        50,
-        950,
-        950
-      ],
-      "note": "Blender camera at x=.09 behind glass toward motherboard, RAM and AIO"
+      "png_sha256": "3b3843476a5cf9eb4fd5a9635339f6c8df6385f1272c85d86b5b423e66664c8a",
+      "webp_sha256": "6ae17cbb7a7e18be6b4092dca434ffdaaf58ecc4b0ea120e4fb96895a243e488",
+      "alpha_zero_count": 349531
     }
-  ]
+  ],
+  "sequence": {
+    "count": 56,
+    "directory": "assets/boot/sequence",
+    "width": 720,
+    "height": 720,
+    "camera_interpolation": "C1 Hermite on eye, aim and focal length",
+    "keyframes": [
+      [
+        0.0,
+        [
+          1.0015,
+          -1.282,
+          0.6175
+        ],
+        [
+          0.037,
+          -0.016,
+          0.265
+        ],
+        88.889
+      ],
+      [
+        0.2,
+        [
+          0.7,
+          -0.87,
+          0.54
+        ],
+        [
+          0.012,
+          -0.08,
+          0.31
+        ],
+        75.0
+      ],
+      [
+        0.32,
+        [
+          0.43,
+          -0.61,
+          0.51
+        ],
+        [
+          0.047,
+          -0.155,
+          0.43
+        ],
+        65.0
+      ],
+      [
+        0.4,
+        [
+          0.31,
+          -0.49,
+          0.56
+        ],
+        [
+          0.055,
+          -0.221,
+          0.502
+        ],
+        60.0
+      ],
+      [
+        0.48,
+        [
+          0.26,
+          -0.46,
+          0.61
+        ],
+        [
+          0.05555,
+          -0.2214,
+          0.50215
+        ],
+        55.0
+      ],
+      [
+        0.54,
+        [
+          0.24,
+          -0.43,
+          0.53
+        ],
+        [
+          0.015,
+          -0.09,
+          0.45
+        ],
+        54.0
+      ],
+      [
+        0.64,
+        [
+          0.2,
+          -0.35,
+          0.45
+        ],
+        [
+          -0.055,
+          0.07,
+          0.395
+        ],
+        55.0
+      ],
+      [
+        0.81,
+        [
+          0.14,
+          -0.275,
+          0.42
+        ],
+        [
+          -0.07,
+          0.105,
+          0.385
+        ],
+        49.0
+      ],
+      [
+        1.0,
+        [
+          0.09,
+          -0.21,
+          0.43
+        ],
+        [
+          -0.073,
+          0.105,
+          0.385
+        ],
+        43.0
+      ]
+    ],
+    "total_webp_bytes": 1594210,
+    "frames": [
+      {
+        "index": 0,
+        "t": 0.0,
+        "file": "sequence/core01-000.webp",
+        "bytes": 31418,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          1.0015,
+          -1.282,
+          0.6175
+        ],
+        "camera_target": [
+          0.037,
+          -0.016,
+          0.265
+        ],
+        "lens_mm": 88.889,
+        "png_sha256": "e11930a4ca49eebda2fc40dd775952e0f922b1b2049c1c510197cf3793d6ec84",
+        "webp_sha256": "356c386d72a31f2b5874d7deeda5983bc7253688df55964290b6f73b4465e684"
+      },
+      {
+        "index": 1,
+        "t": 0.018182,
+        "file": "sequence/core01-001.webp",
+        "bytes": 31976,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.974509,
+          -1.244606,
+          0.610377
+        ],
+        "camera_target": [
+          0.034492,
+          -0.021646,
+          0.268654
+        ],
+        "lens_mm": 87.63419,
+        "png_sha256": "ff50ced4cb964a899a54750201109764dd316ca91c71479e66167a36c268ae6c",
+        "webp_sha256": "4f2eca659acc018c3fd26b49d48ca51e975c2282c9d5ccc6d23a16eea91c2ab5"
+      },
+      {
+        "index": 2,
+        "t": 0.036364,
+        "file": "sequence/core01-002.webp",
+        "bytes": 32344,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.948188,
+          -1.207307,
+          0.60313
+        ],
+        "camera_target": [
+          0.031609,
+          -0.027018,
+          0.27161
+        ],
+        "lens_mm": 86.3919,
+        "png_sha256": "d46a7cc80e208dd0e4d8190a65961a1727b1f74d1a4ee14181998c3273380f2f",
+        "webp_sha256": "f7b983744bcb2d7fd7879d9e2998cebf3cf45e3386046c67f845ede7c4d88b85"
+      },
+      {
+        "index": 3,
+        "t": 0.054545,
+        "file": "sequence/core01-003.webp",
+        "bytes": 32996,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.922285,
+          -1.170069,
+          0.595806
+        ],
+        "camera_target": [
+          0.028491,
+          -0.032217,
+          0.274128
+        ],
+        "lens_mm": 85.15744,
+        "png_sha256": "9ab21370c574d1c6a1706a2aaf560b83d9d9f9abc4aad20c8403a5d0c166e108",
+        "webp_sha256": "1891bc93ee45f57bf6640019f7caab7a41118febe7ad13f0551e464b4ba2949a"
+      },
+      {
+        "index": 4,
+        "t": 0.072727,
+        "file": "sequence/core01-004.webp",
+        "bytes": 33432,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.89655,
+          -1.132855,
+          0.58845
+        ],
+        "camera_target": [
+          0.025279,
+          -0.037348,
+          0.276473
+        ],
+        "lens_mm": 83.9261,
+        "png_sha256": "7c14da702adfb00067e56a37ee2b546b9cf2db70d8c9ef8034a9eb515f918f97",
+        "webp_sha256": "ae539d50d93b5402ab75a29a02f41ca23b4f6d80eb20046591bf604b4ae430f2"
+      },
+      {
+        "index": 5,
+        "t": 0.090909,
+        "file": "sequence/core01-005.webp",
+        "bytes": 33968,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.87073,
+          -1.095629,
+          0.58111
+        ],
+        "camera_target": [
+          0.022115,
+          -0.042513,
+          0.278904
+        ],
+        "lens_mm": 82.69321,
+        "png_sha256": "a2aa2faa2b32a328c850dfbd6cd4ed315164aca9ad6314b28959c57eb6e77ad4",
+        "webp_sha256": "386432a224aabe6e120760b6f0fab55b3f3024208c8b31ed4ec02fc7f6787d67"
+      },
+      {
+        "index": 6,
+        "t": 0.109091,
+        "file": "sequence/core01-006.webp",
+        "bytes": 34534,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.844576,
+          -1.058355,
+          0.573833
+        ],
+        "camera_target": [
+          0.019137,
+          -0.047816,
+          0.281685
+        ],
+        "lens_mm": 81.45405,
+        "png_sha256": "1b8d31e3bbf7692b7eb3ad49643aa8a5a1e9af0fb9fe46214ea878ee4910309a",
+        "webp_sha256": "be80f2b28c50ac65b334c303c84a202f0e9b29752b46f46a326ed04a901f4436"
+      },
+      {
+        "index": 7,
+        "t": 0.127273,
+        "file": "sequence/core01-007.webp",
+        "bytes": 35332,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.817837,
+          -1.020996,
+          0.566663
+        ],
+        "camera_target": [
+          0.016489,
+          -0.053359,
+          0.285077
+        ],
+        "lens_mm": 80.20393,
+        "png_sha256": "2c85927e982a7bd2905ca150018dfb3a6cbf1b759b86744ac31b6d27d3111a5f",
+        "webp_sha256": "13ed295a22e41540395d731df07aa5d9fba8443b2be3ffa1fba7f846a7b77f20"
+      },
+      {
+        "index": 8,
+        "t": 0.145455,
+        "file": "sequence/core01-008.webp",
+        "bytes": 35678,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.79026,
+          -0.983518,
+          0.559649
+        ],
+        "camera_target": [
+          0.01431,
+          -0.059246,
+          0.289343
+        ],
+        "lens_mm": 78.93817,
+        "png_sha256": "3fff196c90759d2f2dbb582565c4110c3d6c186138463d705dd8439b71310d61",
+        "webp_sha256": "6389590f5776b48c6f4f23fa7215c77391567dfab4caf94f2cc928ef5038deb4"
+      },
+      {
+        "index": 9,
+        "t": 0.163636,
+        "file": "sequence/core01-009.webp",
+        "bytes": 36370,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.761596,
+          -0.945883,
+          0.552836
+        ],
+        "camera_target": [
+          0.012742,
+          -0.065579,
+          0.294744
+        ],
+        "lens_mm": 77.65205,
+        "png_sha256": "391a82f44f8a7b4a7966447d0b808069a97542e9818b2ae06783dfe7e5a777aa",
+        "webp_sha256": "a4804fbc6bdb5e47b7a33c3cfeb2eef6b010677a202fa3c6cb00662b86327033"
+      },
+      {
+        "index": 10,
+        "t": 0.181818,
+        "file": "sequence/core01-010.webp",
+        "bytes": 36914,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.731593,
+          -0.908056,
+          0.546271
+        ],
+        "camera_target": [
+          0.011925,
+          -0.072463,
+          0.301542
+        ],
+        "lens_mm": 76.3409,
+        "png_sha256": "47d99f72c1da3240790cc67cd05525f096ce7da08d23f703661b895178c7147e",
+        "webp_sha256": "c277d337f45b2f0148ce31d993a28617265c4646e535aee138732ba7ecfd59aa"
+      },
+      {
+        "index": 11,
+        "t": 0.2,
+        "file": "sequence/core01-011.webp",
+        "bytes": 37928,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.7,
+          -0.87,
+          0.54
+        ],
+        "camera_target": [
+          0.012,
+          -0.08,
+          0.31
+        ],
+        "lens_mm": 75.0,
+        "png_sha256": "b45fee469997a687c76dc11a970e37e1070e81d747b256a4010c1fc34db30471",
+        "webp_sha256": "471451ae0d0da616a5377eb9d7c64b8a9f71fef67ce90fbfb49509dfe443f2a6"
+      },
+      {
+        "index": 12,
+        "t": 0.218182,
+        "file": "sequence/core01-012.webp",
+        "bytes": 36578,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.664464,
+          -0.830855,
+          0.533512
+        ],
+        "camera_target": [
+          0.014073,
+          -0.088681,
+          0.321935
+        ],
+        "lens_mm": 73.57899,
+        "png_sha256": "9643f89fe57185af8f03e7bead8c86ee3228085d920cc345f8ec53d05d5e54bc",
+        "webp_sha256": "92921253738cd9888288d1e3facc26ccf9686beb3c2b31b86be5ed9c13ac4849"
+      },
+      {
+        "index": 13,
+        "t": 0.236364,
+        "file": "sequence/core01-013.webp",
+        "bytes": 35262,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.624075,
+          -0.790342,
+          0.526703
+        ],
+        "camera_target": [
+          0.018595,
+          -0.098746,
+          0.338115
+        ],
+        "lens_mm": 72.05903,
+        "png_sha256": "109c8a62d98d09e552a42281d2aaa1978af922b48bb258a7a022c5df4a3292cf",
+        "webp_sha256": "80d07ca3e4c43c1b4967316718a5e60af5dd3e85004b092cfab858bb2aadcb81"
+      },
+      {
+        "index": 14,
+        "t": 0.254545,
+        "file": "sequence/core01-014.webp",
+        "bytes": 34576,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.580747,
+          -0.749294,
+          0.520236
+        ],
+        "camera_target": [
+          0.02472,
+          -0.109915,
+          0.357226
+        ],
+        "lens_mm": 70.48271,
+        "png_sha256": "69e3e78ecfac682be26d1d14af75074d184f2a752a73d4281a283c2d6a20b76d",
+        "webp_sha256": "288f20d6f6f6bf3971eddcdd9e1938b7797cf49e915303a6ac65aa590fcd7889"
+      },
+      {
+        "index": 15,
+        "t": 0.272727,
+        "file": "sequence/core01-015.webp",
+        "bytes": 32676,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.536392,
+          -0.708546,
+          0.514771
+        ],
+        "camera_target": [
+          0.031604,
+          -0.121914,
+          0.377955
+        ],
+        "lens_mm": 68.89266,
+        "png_sha256": "a032a25dd950206071b4d01f1d930fb564f97836d5d3d0738803ba6091e65524",
+        "webp_sha256": "f846c2390eb7bfce22b219793241f64be9a3bce97c0508399e56ff61f794e7a9"
+      },
+      {
+        "index": 16,
+        "t": 0.290909,
+        "file": "sequence/core01-016.webp",
+        "bytes": 31408,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.492925,
+          -0.668934,
+          0.51097
+        ],
+        "camera_target": [
+          0.038404,
+          -0.134464,
+          0.398989
+        ],
+        "lens_mm": 67.33149,
+        "png_sha256": "06f6d24f0b91de3db3d83efcd36569662bf56e0c47783677403469d4678c516e",
+        "webp_sha256": "0c9e0f9c5fb8ff50184b0a61b0bd91d04ca2dbb2fd2b4a1913f73233758296cd"
+      },
+      {
+        "index": 17,
+        "t": 0.309091,
+        "file": "sequence/core01-017.webp",
+        "bytes": 30534,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.452259,
+          -0.631292,
+          0.509494
+        ],
+        "camera_target": [
+          0.044275,
+          -0.147289,
+          0.419015
+        ],
+        "lens_mm": 65.84179,
+        "png_sha256": "2e3f7044f37de85c4bf6545e210dd93ca9fdef4bc1681660cfcc7bdfc6357dc7",
+        "webp_sha256": "ffc6e3d79afcc74d6c38cb0fd23e870f334cbe09e320c3a2421ce012dd95a262"
+      },
+      {
+        "index": 18,
+        "t": 0.327273,
+        "file": "sequence/core01-018.webp",
+        "bytes": 27392,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.416123,
+          -0.596349,
+          0.51139
+        ],
+        "camera_target": [
+          0.048446,
+          -0.160525,
+          0.437176
+        ],
+        "lens_mm": 64.47032,
+        "png_sha256": "2c87a0ef9ef5902bcd812ce833f7efaebea7ccb8da569b22c31638bbd1c8f99d",
+        "webp_sha256": "5eb69e36edaca560456a01dd1238dd682aa3f325ddca65680a00ea2d9053252d"
+      },
+      {
+        "index": 19,
+        "t": 0.345455,
+        "file": "sequence/core01-019.webp",
+        "bytes": 25168,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.384077,
+          -0.563979,
+          0.519697
+        ],
+        "camera_target": [
+          0.051163,
+          -0.176844,
+          0.456099
+        ],
+        "lens_mm": 63.26118,
+        "png_sha256": "d696f60e6c22d3a2222a97caf4ca6bc1c4fbcbe31b2d601d3f513d1bda0e5836",
+        "webp_sha256": "2a5d9143afcbc68fc39775d63436dc08fa9662cc5ef35f4569227122568dd4a0"
+      },
+      {
+        "index": 20,
+        "t": 0.363636,
+        "file": "sequence/core01-020.webp",
+        "bytes": 24368,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.355755,
+          -0.534854,
+          0.532539
+        ],
+        "camera_target": [
+          0.052904,
+          -0.194354,
+          0.474672
+        ],
+        "lens_mm": 62.16003,
+        "png_sha256": "07e65f23cfcb8b364aa8af5a39405085f3ec403ca245e82a16d53838441a3b59",
+        "webp_sha256": "cf9646ec3e431264e99a5dbec24bb975b2b91768da5a5e8925d35806afd7d924"
+      },
+      {
+        "index": 21,
+        "t": 0.381818,
+        "file": "sequence/core01-021.webp",
+        "bytes": 23074,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.331086,
+          -0.509889,
+          0.54696
+        ],
+        "camera_target": [
+          0.054055,
+          -0.210068,
+          0.490703
+        ],
+        "lens_mm": 61.09645,
+        "png_sha256": "a53f40cc14198dfa298aba24ffd0cfc34ccf5480bb27cfb963b2f6a5cb92ceee",
+        "webp_sha256": "a67368c5001d7d5007b5641580505f3737623dd1b0ceab9640f03d0bc77dc4a6"
+      },
+      {
+        "index": 22,
+        "t": 0.4,
+        "file": "sequence/core01-022.webp",
+        "bytes": 20938,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.31,
+          -0.49,
+          0.56
+        ],
+        "camera_target": [
+          0.055,
+          -0.221,
+          0.502
+        ],
+        "lens_mm": 60.0,
+        "png_sha256": "053f5d8b44ee9198e66d78e9ac0b26556512dba10b81313e6a51f0f9e28ea47d",
+        "webp_sha256": "635950cd7b894c7c8749b6c939f4aaccc63e0f8daa4ef239ed0556aef8109c0a"
+      },
+      {
+        "index": 23,
+        "t": 0.418182,
+        "file": "sequence/core01-023.webp",
+        "bytes": 20310,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.293488,
+          -0.477246,
+          0.574044
+        ],
+        "camera_target": [
+          0.056565,
+          -0.228546,
+          0.508101
+        ],
+        "lens_mm": 58.80091,
+        "png_sha256": "9f59a199165760dbe538b44d16b5623a81d675503bd61c489f8a7e66373771cb",
+        "webp_sha256": "06f949f5b6ebc72e2606ac15459f2e56293852dc50548aa4722260e2ba2ee22d"
+      },
+      {
+        "index": 24,
+        "t": 0.436364,
+        "file": "sequence/core01-024.webp",
+        "bytes": 20640,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.281412,
+          -0.470761,
+          0.590294
+        ],
+        "camera_target": [
+          0.058392,
+          -0.234099,
+          0.510292
+        ],
+        "lens_mm": 57.55018,
+        "png_sha256": "1ec43967e99be6410fd981cbe32dc7ff885c5cd3d5b96806adb9cf8a4638f005",
+        "webp_sha256": "0a51e7cd4ca6f1338612f65710b25e3411d40cda150574b58b0cb3053d9bba96"
+      },
+      {
+        "index": 25,
+        "t": 0.454545,
+        "file": "sequence/core01-025.webp",
+        "bytes": 22068,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.272014,
+          -0.467073,
+          0.604022
+        ],
+        "camera_target": [
+          0.059094,
+          -0.234668,
+          0.508999
+        ],
+        "lens_mm": 56.35847,
+        "png_sha256": "94dd7aa8e804434dc466b7d543f0a0d448bf9fad734da09014ddffaffca540c8",
+        "webp_sha256": "ebff720d3d9e065fbead176acad5ccfcf7061a0d3f70037d41da2fa1bd851557"
+      },
+      {
+        "index": 26,
+        "t": 0.472727,
+        "file": "sequence/core01-026.webp",
+        "bytes": 23332,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.263531,
+          -0.462711,
+          0.610499
+        ],
+        "camera_target": [
+          0.057287,
+          -0.227264,
+          0.50465
+        ],
+        "lens_mm": 55.33648,
+        "png_sha256": "84d2375bcbf82031daadcc16c119d2cc3117819719511bcd23add5247078be00",
+        "webp_sha256": "90d98391ede864710d8ecc4e41b7fad7b657cf40ae4bdb317f85da5aa5746c30"
+      },
+      {
+        "index": 27,
+        "t": 0.490909,
+        "file": "sequence/core01-027.webp",
+        "bytes": 24180,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.255214,
+          -0.455371,
+          0.603086
+        ],
+        "camera_target": [
+          0.051051,
+          -0.20607,
+          0.495979
+        ],
+        "lens_mm": 54.59987,
+        "png_sha256": "1eceb99b3afe47699e249be9afa79f2aac3aaa666f33966c25e1dc85c16c12f0",
+        "webp_sha256": "1987ff5fdb125b9344ee707a49b5ed7093142fe4d327aa0404f789963ba52305"
+      },
+      {
+        "index": 28,
+        "t": 0.509091,
+        "file": "sequence/core01-028.webp",
+        "bytes": 25462,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.249319,
+          -0.447368,
+          0.577429
+        ],
+        "camera_target": [
+          0.039011,
+          -0.164695,
+          0.479258
+        ],
+        "lens_mm": 54.19186,
+        "png_sha256": "90880d1a48acf6461b64487852ebe2bda4e59b911db3ba1e6786cd23c2776f3f",
+        "webp_sha256": "39d7db5434d7ade8e5279462f5633e163a5815c2c2c1e1c758289652ff36c44d"
+      },
+      {
+        "index": 29,
+        "t": 0.527273,
+        "file": "sequence/core01-029.webp",
+        "bytes": 26742,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.244217,
+          -0.437997,
+          0.546716
+        ],
+        "camera_target": [
+          0.024551,
+          -0.117627,
+          0.460545
+        ],
+        "lens_mm": 54.02474,
+        "png_sha256": "396d3abde5a240ca2c0fcdf3fc4ec88eb342613cdfca545d0157c6102154981e",
+        "webp_sha256": "d273293f445a022dbee0b336f185353aead7dfebb354ec900cb12a87f9e5ecec"
+      },
+      {
+        "index": 30,
+        "t": 0.545455,
+        "file": "sequence/core01-030.webp",
+        "bytes": 27228,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.237932,
+          -0.426121,
+          0.524551
+        ],
+        "camera_target": [
+          0.011118,
+          -0.079947,
+          0.446329
+        ],
+        "lens_mm": 54.01381,
+        "png_sha256": "b9934d322e6ee3e5e1e6fc6f98b1ccfdd6eeaab2c790a16726da1cb36f852bcc",
+        "webp_sha256": "32b57c9446f81fbd54a9b0a651bee780414b7c9f5496d29a6aa0f0caebfba4ed"
+      },
+      {
+        "index": 31,
+        "t": 0.563636,
+        "file": "sequence/core01-031.webp",
+        "bytes": 27728,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.230764,
+          -0.411678,
+          0.506659
+        ],
+        "camera_target": [
+          -0.003064,
+          -0.045387,
+          0.434031
+        ],
+        "lens_mm": 54.2202,
+        "png_sha256": "d8b5d9d9e6763a7dd6c859950ecc29ceb6bf86e0322a3e143dcda22a1a058678",
+        "webp_sha256": "51e2404aeb5a3135b10282d4c64ad9ce76b1f292cb33b4668c321489d5f3402f"
+      },
+      {
+        "index": 32,
+        "t": 0.581818,
+        "file": "sequence/core01-032.webp",
+        "bytes": 28714,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.223325,
+          -0.395839,
+          0.48972
+        ],
+        "camera_target": [
+          -0.018064,
+          -0.011028,
+          0.422159
+        ],
+        "lens_mm": 54.56679,
+        "png_sha256": "f8095086f420db4026067877e0d27fe18acc2edf28b5e33e1ddd7f0cf7e372b0",
+        "webp_sha256": "e05e39bea069030794dc3ce7d9e16062a719cd11af2b0fdd5bd1bab401825f29"
+      },
+      {
+        "index": 33,
+        "t": 0.6,
+        "file": "sequence/core01-033.webp",
+        "bytes": 31372,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.215813,
+          -0.379827,
+          0.474427
+        ],
+        "camera_target": [
+          -0.03246,
+          0.020764,
+          0.411398
+        ],
+        "lens_mm": 54.91467,
+        "png_sha256": "945e52e5b9a1188c8e0770dd81f12be19fd8cd02f9f60ce0db89e9f04fb0e113",
+        "webp_sha256": "af7730f74499689f4efc30f6ca9b83292ccedf2f35525ebcdf3db610ce5f5db5"
+      },
+      {
+        "index": 34,
+        "t": 0.618182,
+        "file": "sequence/core01-034.webp",
+        "bytes": 30216,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.208425,
+          -0.36486,
+          0.461475
+        ],
+        "camera_target": [
+          -0.04483,
+          0.047621,
+          0.40243
+        ],
+        "lens_mm": 55.12493,
+        "png_sha256": "0b241e89a8b25b0b061068fada12a0b6d93a7886f7145e8590c3389aca8d3c9e",
+        "webp_sha256": "e4124ed77e198a7b0062da8c9db60c595e5bd84024da3c9eb232155aa8e4b586"
+      },
+      {
+        "index": 35,
+        "t": 0.636364,
+        "file": "sequence/core01-035.webp",
+        "bytes": 29126,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.201358,
+          -0.352161,
+          0.451558
+        ],
+        "camera_target": [
+          -0.053754,
+          0.067174,
+          0.39594
+        ],
+        "lens_mm": 55.05866,
+        "png_sha256": "27fb64eca63976004b842e243f5208060d8d16cbf67e7f1cacf860dce1fecaf7",
+        "webp_sha256": "6a68ff20c340407c59e0d3391d3c98716eb37db0d42aba8b8cff3d65abea2512"
+      },
+      {
+        "index": 36,
+        "t": 0.654545,
+        "file": "sequence/core01-036.webp",
+        "bytes": 28526,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.1946,
+          -0.341907,
+          0.444487
+        ],
+        "camera_target": [
+          -0.059083,
+          0.079398,
+          0.391896
+        ],
+        "lens_mm": 54.68844,
+        "png_sha256": "6236f9a131aa3f228d5aa8b6e8173235caded347f1357f810f28127088fc1e38",
+        "webp_sha256": "f36b06852898576d3f381be4726b240c7604341cb2071af677b3df7d2de6cdb7"
+      },
+      {
+        "index": 37,
+        "t": 0.672727,
+        "file": "sequence/core01-037.webp",
+        "bytes": 28628,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.187836,
+          -0.33246,
+          0.438681
+        ],
+        "camera_target": [
+          -0.062917,
+          0.088309,
+          0.389035
+        ],
+        "lens_mm": 54.19292,
+        "png_sha256": "a032e3962f225f60221382e26281e5ff050a1d652a902afcf00a02de883d9f80",
+        "webp_sha256": "305ab7f9e17818c69c0c8da838961c90c1c5596ef42c4bdb4d1496b6c4a45547"
+      },
+      {
+        "index": 38,
+        "t": 0.690909,
+        "file": "sequence/core01-038.webp",
+        "bytes": 28542,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.181091,
+          -0.323661,
+          0.433955
+        ],
+        "camera_target": [
+          -0.065561,
+          0.094542,
+          0.387129
+        ],
+        "lens_mm": 53.60138,
+        "png_sha256": "d63cb02431e94442a67004ead61a08315ee20173ee5561c1f864218d25456b3b",
+        "webp_sha256": "f007bed59a22ca3c45e6d4709e9de70fd6cea846d8a9e87406e9b35009283cc8"
+      },
+      {
+        "index": 39,
+        "t": 0.709091,
+        "file": "sequence/core01-039.webp",
+        "bytes": 28100,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.174401,
+          -0.315412,
+          0.43017
+        ],
+        "camera_target": [
+          -0.067249,
+          0.098605,
+          0.38599
+        ],
+        "lens_mm": 52.93719,
+        "png_sha256": "125d6a35e1ec8598f3fd8fa110ea13366f35844821df035c648f6229b0f31a1f",
+        "webp_sha256": "181ee107ca4ca0f364d9495676d6874f49b619808f19f3003324a473c1896b18"
+      },
+      {
+        "index": 40,
+        "t": 0.727273,
+        "file": "sequence/core01-040.webp",
+        "bytes": 28062,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.167805,
+          -0.307611,
+          0.42719
+        ],
+        "camera_target": [
+          -0.068217,
+          0.101008,
+          0.38543
+        ],
+        "lens_mm": 52.22374,
+        "png_sha256": "c7f886c24559acb9f9f3cf7ef8bfe959f9a64b2d913e2c89eb0a85cb2236fa72",
+        "webp_sha256": "97bf95efc1f4c8c79b147fcdbffe49d83b0e75691f355f05cb1320cefcc9a326"
+      },
+      {
+        "index": 41,
+        "t": 0.745455,
+        "file": "sequence/core01-041.webp",
+        "bytes": 28140,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.161339,
+          -0.300157,
+          0.424876
+        ],
+        "camera_target": [
+          -0.068699,
+          0.102259,
+          0.38526
+        ],
+        "lens_mm": 51.4844,
+        "png_sha256": "72d7af974ee293405bd1e56672c8a101b40d3f6633dec4069e39a62f781bb77a",
+        "webp_sha256": "55ef709e6bc2c863d9fd9d52197783be1566e888c53610096fc5c75c8f545500"
+      },
+      {
+        "index": 42,
+        "t": 0.763636,
+        "file": "sequence/core01-042.webp",
+        "bytes": 28618,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.155041,
+          -0.29295,
+          0.423093
+        ],
+        "camera_target": [
+          -0.06893,
+          0.102868,
+          0.385293
+        ],
+        "lens_mm": 50.74255,
+        "png_sha256": "ae5cd7b291dd2c5cd0628dc5ee8cedf421fdeb2eeeca05df9458552cf4b8ba19",
+        "webp_sha256": "125f1d29020c8806dbafebcd7798aa4574363ead21e8c0c2bf2659c3bc34e824"
+      },
+      {
+        "index": 43,
+        "t": 0.781818,
+        "file": "sequence/core01-043.webp",
+        "bytes": 27504,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.148949,
+          -0.28589,
+          0.421702
+        ],
+        "camera_target": [
+          -0.069146,
+          0.103341,
+          0.38534
+        ],
+        "lens_mm": 50.02158,
+        "png_sha256": "98549fbcffc6c7b96f49a39a6cda8e4e52cdaadb5d464fcabf49f34c1b215f66",
+        "webp_sha256": "d55a594df9dba35f8460a0eacbb8542e248cd735e22fadd70d5a31f249552aa1"
+      },
+      {
+        "index": 44,
+        "t": 0.8,
+        "file": "sequence/core01-044.webp",
+        "bytes": 27006,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.1431,
+          -0.278875,
+          0.420566
+        ],
+        "camera_target": [
+          -0.069582,
+          0.10419,
+          0.385212
+        ],
+        "lens_mm": 49.34486,
+        "png_sha256": "a21a69f2d3a4a4e78ba935a95e6f6486e696f2793c568b089400d3e17816d4e2",
+        "webp_sha256": "82fc0315ecd82ad11cb25e5149e523d684e2c7a41fa6cc418ea42a6e1ecb2b85"
+      },
+      {
+        "index": 45,
+        "t": 0.818182,
+        "file": "sequence/core01-045.webp",
+        "bytes": 24792,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.137529,
+          -0.27185,
+          0.41962
+        ],
+        "camera_target": [
+          -0.070385,
+          0.105728,
+          0.384792
+        ],
+        "lens_mm": 48.72848,
+        "png_sha256": "8d5da27adbcee68aa7286f8b3d39421fdf6d8510b09614f409656e2f196ce128",
+        "webp_sha256": "957dd7ba20a8d3088e06a2d54fac3633d5ee8f06e49145956e2ef4929a7dfdd1"
+      },
+      {
+        "index": 46,
+        "t": 0.836364,
+        "file": "sequence/core01-046.webp",
+        "bytes": 21608,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.132233,
+          -0.265066,
+          0.419272
+        ],
+        "camera_target": [
+          -0.071085,
+          0.106901,
+          0.384457
+        ],
+        "lens_mm": 48.13316,
+        "png_sha256": "249d0e997fdcb5c14a3c0a03963f0f1d05f6dc5f4157b9db693d694f8b6f922f",
+        "webp_sha256": "beb2e889fe7a13637a1e1d9bfbff372bdf6d6165633ac0e13ed323b3d55b1738"
+      },
+      {
+        "index": 47,
+        "t": 0.854545,
+        "file": "sequence/core01-047.webp",
+        "bytes": 16618,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.127171,
+          -0.258539,
+          0.41952
+        ],
+        "camera_target": [
+          -0.071596,
+          0.107538,
+          0.384275
+        ],
+        "lens_mm": 47.5475,
+        "png_sha256": "7839d156325b5b717c031f85463be30a48d948249591862e4162284958827dbd",
+        "webp_sha256": "48eb027cdbf69dd31c515749d13e6bfcc414bef037bc43ba77c8f22c648e6da5"
+      },
+      {
+        "index": 48,
+        "t": 0.872727,
+        "file": "sequence/core01-048.webp",
+        "bytes": 9790,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.122299,
+          -0.252224,
+          0.420256
+        ],
+        "camera_target": [
+          -0.071953,
+          0.107736,
+          0.384218
+        ],
+        "lens_mm": 46.96976,
+        "png_sha256": "939ebbd416331bc5cf79ae5b441703874f65849b469237274237f27af401976f",
+        "webp_sha256": "e81958c308ad4347bca3d3496eb89268b51f4bcdfd468f95ce1478d196ff0200"
+      },
+      {
+        "index": 49,
+        "t": 0.890909,
+        "file": "sequence/core01-049.webp",
+        "bytes": 13118,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.117577,
+          -0.246073,
+          0.421373
+        ],
+        "camera_target": [
+          -0.07219,
+          0.107593,
+          0.384259
+        ],
+        "lens_mm": 46.39818,
+        "png_sha256": "3ada147a8b7183737e821a4cc09bd9a190ed53799b759153084116d7266dddf0",
+        "webp_sha256": "0fce362e5a4b99355b4228f6f9e33acacd371815524907ba7a27b38bae59d920"
+      },
+      {
+        "index": 50,
+        "t": 0.909091,
+        "file": "sequence/core01-050.webp",
+        "bytes": 1704,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.112962,
+          -0.240039,
+          0.422761
+        ],
+        "camera_target": [
+          -0.072341,
+          0.107205,
+          0.38437
+        ],
+        "lens_mm": 45.83101,
+        "png_sha256": "5bddef61b883bd1fa08039376d98617b2aca6a9e680be8e76ef901edb6765e4b",
+        "webp_sha256": "7034da28451d63989747d263808a63d3a8e2168ee6a4ae3932ef5b1a61bdeea1"
+      },
+      {
+        "index": 51,
+        "t": 0.927273,
+        "file": "sequence/core01-051.webp",
+        "bytes": 37576,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.10841,
+          -0.234077,
+          0.424313
+        ],
+        "camera_target": [
+          -0.072439,
+          0.106671,
+          0.384523
+        ],
+        "lens_mm": 45.26651,
+        "png_sha256": "4371e2bfbf4e1196f65f5f4964599da4bf21865c401b2ec8af8d864b23caf94d",
+        "webp_sha256": "fb3b4ecf234bc2f7ebfd3cf21cf21c14872ed2b44c0d337d6ec2af44c8654eef"
+      },
+      {
+        "index": 52,
+        "t": 0.945455,
+        "file": "sequence/core01-052.webp",
+        "bytes": 36892,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.103881,
+          -0.228138,
+          0.425921
+        ],
+        "camera_target": [
+          -0.072521,
+          0.106085,
+          0.38469
+        ],
+        "lens_mm": 44.7029,
+        "png_sha256": "edc469ee1281f81b5d2257b985da4171d27d5aafd81bf32efdd7d297567a46fe",
+        "webp_sha256": "fc3e8c61b647f42a5714b2ab801e4424465b85feac77a92fd507db517bc7f07d"
+      },
+      {
+        "index": 53,
+        "t": 0.963636,
+        "file": "sequence/core01-053.webp",
+        "bytes": 36230,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.099331,
+          -0.222177,
+          0.427477
+        ],
+        "camera_target": [
+          -0.072618,
+          0.105547,
+          0.384844
+        ],
+        "lens_mm": 44.13845,
+        "png_sha256": "9df91274860d369a6ce4853b04ab891853b8fb6615d74bd407c1d25c10fd40e3",
+        "webp_sha256": "63ac6016d0578824d271a3dbd980b1f943b48fe8b90f6ca59e06712479331040"
+      },
+      {
+        "index": 54,
+        "t": 0.981818,
+        "file": "sequence/core01-054.webp",
+        "bytes": 35686,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.094718,
+          -0.216146,
+          0.428873
+        ],
+        "camera_target": [
+          -0.072767,
+          0.105153,
+          0.384956
+        ],
+        "lens_mm": 43.5714,
+        "png_sha256": "a08e7001639cf40f64a9d73942c3adfd0fe6ca1c58c2815803cf20ffcebd1400",
+        "webp_sha256": "ef72ddfccba6f044a779acc38d1c5f5acdca1be3cd49d815144b614ee633841f"
+      },
+      {
+        "index": 55,
+        "t": 1.0,
+        "file": "sequence/core01-055.webp",
+        "bytes": 35088,
+        "width": 720,
+        "height": 720,
+        "camera_eye": [
+          0.09,
+          -0.21,
+          0.43
+        ],
+        "camera_target": [
+          -0.073,
+          0.105,
+          0.385
+        ],
+        "lens_mm": 43.0,
+        "png_sha256": "47152436330b0d33b824bb704361b8f5c828dc1bd98a3ef01163205622603912",
+        "webp_sha256": "8fb1fdf60844479626de2c4a94fb2431f535656de6fc7233d063ee408a5ee272"
+      }
+    ]
+  },
+  "scroll_desktop": "580svh",
+  "scroll_mobile": "430svh"
 }
