@@ -1,0 +1,47 @@
+{
+  "stage": "C6.9-A G1 / pose-selector / NOT full animation",
+  "master_sha256": "1169b695582b76c08c5f4f43020f8b188fad3d14ad2d1c00887f494a85c04ce7",
+  "source": "canonical Blender loaded read-only",
+  "frame_count": 7,
+  "size": [
+    700,
+    700
+  ],
+  "frames": [
+    {
+      "file": "pose-00.webp",
+      "sha256": "1ad1d7852ec2d6273c441d37929b514951d4f8ff44f8222b80f1fc5bf7d851ca",
+      "bytes": 18662
+    },
+    {
+      "file": "pose-01.webp",
+      "sha256": "06baf0f09f6585a5ecffa2449a0fe4837f93c8cd15863d897411ba5c97ee7605",
+      "bytes": 19106
+    },
+    {
+      "file": "pose-02.webp",
+      "sha256": "d121557ae7471852f9ba68b33165ab9b3f6a794f627d5747cc1959b4fd684998",
+      "bytes": 20022
+    },
+    {
+      "file": "pose-03.webp",
+      "sha256": "afb0200d7c61a169314908e7cf6e169e4c8883abb2282399be12f7768d1641e5",
+      "bytes": 20898
+    },
+    {
+      "file": "pose-04.webp",
+      "sha256": "1601dbacd71d61e1d63c3575512f901ab5885e1b45cc0ebbab3efceadbd6311f",
+      "bytes": 24398
+    },
+    {
+      "file": "pose-05.webp",
+      "sha256": "41c3c49f0ce6a6166cce6dff3d8393453df79d9d9563055773ee3537501c0be5",
+      "bytes": 25358
+    },
+    {
+      "file": "pose-06.webp",
+      "sha256": "2365fa5091f34753bcfd0e62df186b0f0ec9cff6a9bb130863a41535e02286bc",
+      "bytes": 26284
+    }
+  ]
+}
