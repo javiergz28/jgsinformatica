@@ -17,7 +17,7 @@ test('C6.7 is an independent labeled preview with four following chapter concept
  assert.equal([...html.matchAll(/PREVIEW CONCEPTUAL/g)].length,4);
  assert.match(html,/href="\.\/index\.html#contacto"/);
  assert.match(read('index.html'),/href="\.\/c6-7-preview\.html"/);
- assert.match(read('index.html'),/href="\.\/c6-6-preview\.html"/);
+ assert.match(read('index.html'),/href="\.\/c6-10-preview\.html"/);
 });
 
 test('C6.7 is reversible, smooth, non-blocking and accessible with mobile guardrails',()=>{
@@ -70,10 +70,10 @@ test('C6.7 160 1080px WebP render files are complete and checksum-verified',()=>
  assert(manifest.frames[0].alpha_zero_count>500_000,'opening lacks transparent background');
 });
 
-test('Pages deploy keeps C6.6 comparison and adds C6.7 without touching LIVE',()=>{
+test('Pages keeps C6.7 baseline alongside current C6.10 without touching LIVE',()=>{
  const ci=read('.github/workflows/ci.yml');
  assert.match(ci,/node --check c6-7-preview\.js/);
- assert.match(ci,/cp index\.html styles\.css script\.js c6-6-preview\.html c6-6-preview\.css c6-6-preview\.js c6-7-preview\.html/);
+ assert.match(ci,/cp index\.html styles\.css script\.js c6-7-preview\.html/);
  assert.match(ci,/cp assets\/boot\/c6-7\/\*\.webp assets\/boot\/c6-7\/manifest\.json _site\/assets\/boot\/c6-7\//);
  assert.match(ci,/if: github\.ref == 'refs\/heads\/main'/);
 });
