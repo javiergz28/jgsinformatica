@@ -1,0 +1,309 @@
+{
+  "study": "C6.9-B G1.1 closer curved camera / 25 frames, not production quality",
+  "master_sha256": "1169b695582b76c08c5f4f43020f8b188fad3d14ad2d1c00887f494a85c04ce7",
+  "count": 25,
+  "size": 700,
+  "samples": 8,
+  "frames": [
+    {
+      "index": 0,
+      "sha256": "a21be2bdc1a107905f170cc1dd16a0f0379402c8fdb17b17d9915e8e46cf5b34",
+      "bytes": 22514,
+      "bbox": [
+        107,
+        113,
+        528,
+        648
+      ],
+      "file": "pose-00.webp"
+    },
+    {
+      "index": 1,
+      "sha256": "3fddddefd0a04a9a08764a0e54084f8398a08e67c3684c27b235172e9ed66198",
+      "bytes": 22630,
+      "bbox": [
+        107,
+        113,
+        528,
+        648
+      ],
+      "file": "pose-01.webp"
+    },
+    {
+      "index": 2,
+      "sha256": "13c63a4acc028ab03b3d11a3745ff321b5bffc7398a31ff083b70893f02602af",
+      "bytes": 22528,
+      "bbox": [
+        108,
+        114,
+        529,
+        648
+      ],
+      "file": "pose-02.webp"
+    },
+    {
+      "index": 3,
+      "sha256": "24a97b0d37241f18d94f6a06ca6cbdc16b7592e872488bec7ec8ca2dd4ed9d46",
+      "bytes": 22452,
+      "bbox": [
+        108,
+        115,
+        530,
+        647
+      ],
+      "file": "pose-03.webp"
+    },
+    {
+      "index": 4,
+      "sha256": "ab3b68e80d1fe1766709e53d8a1784832d01df3ae332d16ad883a738d7fd9320",
+      "bytes": 22114,
+      "bbox": [
+        109,
+        116,
+        531,
+        647
+      ],
+      "file": "pose-04.webp"
+    },
+    {
+      "index": 5,
+      "sha256": "613ecdcc97e134d0b5464c34ced1397761a762b1097993cd923e32b88d51095e",
+      "bytes": 22248,
+      "bbox": [
+        110,
+        118,
+        533,
+        647
+      ],
+      "file": "pose-05.webp"
+    },
+    {
+      "index": 6,
+      "sha256": "55879e82eba0ef27e30fd24b7cc89affc0f22362e15d13aa5c5cf8dafab87eec",
+      "bytes": 22290,
+      "bbox": [
+        110,
+        119,
+        534,
+        648
+      ],
+      "file": "pose-06.webp"
+    },
+    {
+      "index": 7,
+      "sha256": "7d5d106e7a5de9eb6f98909b2dbcf3ad2d5d5cf25957e0e38273b2b3b26c48ab",
+      "bytes": 22060,
+      "bbox": [
+        111,
+        120,
+        536,
+        648
+      ],
+      "file": "pose-07.webp"
+    },
+    {
+      "index": 8,
+      "sha256": "8a7182c7735df65c3527d49b7f2340c508ade3971150c48b97e5690e2f617fb9",
+      "bytes": 22566,
+      "bbox": [
+        111,
+        121,
+        537,
+        649
+      ],
+      "file": "pose-08.webp"
+    },
+    {
+      "index": 9,
+      "sha256": "43cebf0a345862b563d50e5339a131ee7af8c869838076feef0457670877e09e",
+      "bytes": 22634,
+      "bbox": [
+        111,
+        121,
+        538,
+        651
+      ],
+      "file": "pose-09.webp"
+    },
+    {
+      "index": 10,
+      "sha256": "01fc205c62448e974507ce1d200f2df967d6c473dc8024d22efa6894dfa6edda",
+      "bytes": 22712,
+      "bbox": [
+        110,
+        121,
+        540,
+        653
+      ],
+      "file": "pose-10.webp"
+    },
+    {
+      "index": 11,
+      "sha256": "df28416d0215860890ccde297a47eb33badb82aef11267f0a798eb8df69e16cd",
+      "bytes": 23154,
+      "bbox": [
+        109,
+        120,
+        540,
+        655
+      ],
+      "file": "pose-11.webp"
+    },
+    {
+      "index": 12,
+      "sha256": "3537cc852469049105bebe77317dc7b7df923e7b6959692fc0f6fd772704b020",
+      "bytes": 23088,
+      "bbox": [
+        107,
+        118,
+        540,
+        657
+      ],
+      "file": "pose-12.webp"
+    },
+    {
+      "index": 13,
+      "sha256": "45346d17546c22c72dfb71d06d7c23598be646c44867463f88b481822ae0eefc",
+      "bytes": 23402,
+      "bbox": [
+        105,
+        116,
+        541,
+        658
+      ],
+      "file": "pose-13.webp"
+    },
+    {
+      "index": 14,
+      "sha256": "6e189781145ce12755a5ff6f9609e0d981353de16f63fe59ef4147cc520ed20d",
+      "bytes": 24188,
+      "bbox": [
+        103,
+        112,
+        540,
+        660
+      ],
+      "file": "pose-14.webp"
+    },
+    {
+      "index": 15,
+      "sha256": "946aa84099ca8b4a65816ab8a7713510aeee34fc00d24b96dd97c07e889775c0",
+      "bytes": 25112,
+      "bbox": [
+        100,
+        108,
+        540,
+        661
+      ],
+      "file": "pose-15.webp"
+    },
+    {
+      "index": 16,
+      "sha256": "cfa5b3f53378f10914bff57ce5c0901af672f72331bad13be7ca02a279494018",
+      "bytes": 25518,
+      "bbox": [
+        98,
+        103,
+        540,
+        661
+      ],
+      "file": "pose-16.webp"
+    },
+    {
+      "index": 17,
+      "sha256": "db9c7d1650a513cab97a969fcad07f87b1162e22ead5ec33c4def1a7f9ed6aeb",
+      "bytes": 25786,
+      "bbox": [
+        95,
+        97,
+        540,
+        660
+      ],
+      "file": "pose-17.webp"
+    },
+    {
+      "index": 18,
+      "sha256": "0f821e22afc7fed0d0e0ccf9fda470b3b984dbf1a6923484dd2f6567fef0a6db",
+      "bytes": 26104,
+      "bbox": [
+        92,
+        91,
+        539,
+        658
+      ],
+      "file": "pose-18.webp"
+    },
+    {
+      "index": 19,
+      "sha256": "d506bdd06f4dce5e07edb8eec1248d5bc759c0747dffe8f9d7ca017604d1223a",
+      "bytes": 26528,
+      "bbox": [
+        89,
+        85,
+        539,
+        656
+      ],
+      "file": "pose-19.webp"
+    },
+    {
+      "index": 20,
+      "sha256": "3a3f9c89270bf14608a0f37a8d64a10ac906492ba501d945705989ee9557c20c",
+      "bytes": 26654,
+      "bbox": [
+        86,
+        79,
+        539,
+        653
+      ],
+      "file": "pose-20.webp"
+    },
+    {
+      "index": 21,
+      "sha256": "2038ebc3c06042ff382f9282c2c8e92ab7a700e0a30ee674da6531cf401d956c",
+      "bytes": 26804,
+      "bbox": [
+        84,
+        73,
+        540,
+        651
+      ],
+      "file": "pose-21.webp"
+    },
+    {
+      "index": 22,
+      "sha256": "bd703dcbb3651f3f60450d167d1e9da411c7f01ebd45c21986a97e60b9cabd7f",
+      "bytes": 26930,
+      "bbox": [
+        83,
+        69,
+        540,
+        648
+      ],
+      "file": "pose-22.webp"
+    },
+    {
+      "index": 23,
+      "sha256": "93abf47171fcb41b80417d1259e21611ce5ba20a0b9b535739adbed3bd3a662e",
+      "bytes": 27108,
+      "bbox": [
+        81,
+        66,
+        540,
+        647
+      ],
+      "file": "pose-23.webp"
+    },
+    {
+      "index": 24,
+      "sha256": "94d2c63ef4b2161024ee691f5189c450ad430dc2182e222c5e61a543d8170175",
+      "bytes": 27226,
+      "bbox": [
+        81,
+        65,
+        540,
+        646
+      ],
+      "file": "pose-24.webp"
+    }
+  ]
+}
