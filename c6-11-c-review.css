@@ -1,0 +1,20 @@
+:root{color-scheme:dark;--bg:#070b16;--fg:#f4f7ff;--cyan:#00d9e8;--muted:#a0a9ba}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}a:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:6px}
+.skip{position:absolute;top:-100px;left:20px;background:white;color:black;padding:12px}.skip:focus{top:10px}
+.mast{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px clamp(24px,5vw,88px)}
+.wordmark{display:flex;align-items:center;text-decoration:none;gap:10px;font-size:16px;letter-spacing:-.055em}.wordmark span{color:var(--cyan)}.wordmark img{width:34px;height:34px}
+.status,.back,.eyebrow,figcaption,.range-label,.range-ends,.comparison-heading output,.note{font:400 11px/1.6 "Geist Mono",ui-monospace,monospace;letter-spacing:.04em}
+.status{color:#a0b5c2}.back{text-decoration:none;border-bottom:1px solid var(--cyan);padding-bottom:6px}
+.hero{padding:clamp(48px,7vw,115px) clamp(24px,7vw,110px) clamp(40px,5vw,85px);max-width:1100px}
+.eyebrow{color:var(--cyan)}h1{font-weight:400;font-size:clamp(49px,7vw,110px);line-height:1.025;letter-spacing:-.075em;margin:20px 0 26px}
+h1 em{font-style:normal;color:var(--muted)}.hero>p:last-child{font-size:clamp(16px,1.4vw,21px);max-width:740px;color:#b2c2d0;line-height:1.62}.hero strong{font-weight:500;color:white}
+.comparison{padding:40px clamp(24px,5vw,88px) 95px;background:#0b111c;border-top:1px solid #214654;border-bottom:1px solid #214654}
+.comparison-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}.comparison-heading h2{font-weight:400;letter-spacing:-.05em;font-size:clamp(26px,3vw,44px)}.comparison-heading output{color:var(--cyan);text-align:right}
+.views{display:grid;grid-template-columns:1fr 1fr;gap:20px}.view{min-width:0;margin:0}.view figcaption{margin-bottom:12px;color:#adc3d0}
+.image-area{position:relative;aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden;background:#070b16;border:1px solid #233442}
+.image-area img{display:block;width:100%;height:100%;object-fit:contain}.candidate img{object-fit:cover}
+.range-label{display:block;margin-top:37px;color:#b2c5d0}input[type=range]{display:block;width:100%;margin:19px 0;accent-color:var(--cyan);cursor:pointer}.range-ends{display:flex;justify-content:space-between;color:#829bac;gap:20px}.note{color:#95aebe;max-width:900px;margin-top:33px;line-height:1.75}
+.checks{padding:clamp(80px,8vw,150px) clamp(24px,7vw,110px)}.checks h2{font-size:clamp(42px,6vw,85px);letter-spacing:-.06em;font-weight:400;margin:12px 0 40px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:1px solid #32515e;padding-top:23px}.stats p{margin:0}.stats strong{display:block;font-weight:400;font-size:clamp(35px,5vw,65px)}.stats span{display:block;max-width:180px;font-size:13px;color:var(--muted)}.checks>p:not(.eyebrow){color:#a3b8c5;max-width:630px;line-height:1.75;margin:43px 0}.checks>a{text-decoration:none;border-bottom:1px solid var(--cyan);padding-bottom:8px;font:12px/1.5 "Geist Mono",monospace}
+@media(max-width:800px){.mast{padding:18px 22px}.status{display:none}.back{font-size:9px}.hero{padding:75px 24px 45px}.views{grid-template-columns:1fr}.comparison{padding:30px 22px 80px}.comparison-heading{align-items:start;flex-direction:column;gap:4px}.comparison-heading h2{margin-bottom:8px}.view figcaption{font-size:9px}.stats{grid-template-columns:1fr 1fr}.stats strong{font-size:36px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

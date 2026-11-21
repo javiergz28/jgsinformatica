@@ -1,0 +1,106 @@
+{
+  "stage": "C6.11-C/G1 photographic probe, NOT user-approved, NOT 450-frame final",
+  "count": 7,
+  "source_master_sha256": "6522cbb38d303554fb9c25b13975bfa2c728d5ce1908b9e9dc3b1b403fa6f7d2",
+  "render_format": "1920x1080, Cycles Metal 32 samples, transparent RGBA, webp quality 88",
+  "camera_descent_m": 0.48,
+  "total_distance_m": 1.1867,
+  "glass_crossing_frames": [
+    394.62,
+    398.61
+  ],
+  "solid_collision_count": 0,
+  "frames": [
+    {
+      "index": 0,
+      "source_png_sha256": "ab1ce72201b0e13d70085104082d0bc8ef52617dc563ae70057c396aeff4d31b",
+      "file": "wide-000.webp",
+      "bytes": 45782,
+      "sha256": "a66f269a1fb731f7487ad472318f585dfe9421ca8afa6832c32d30e19a1fc43a",
+      "bbox": [
+        607,
+        207,
+        1245,
+        1053
+      ]
+    },
+    {
+      "index": 100,
+      "source_png_sha256": "8737186293c87ccfdc9ef934d0f346b22999ea707d4fc9dba06136be9ed34a08",
+      "file": "wide-100.webp",
+      "bytes": 51128,
+      "sha256": "343eea07af14b2ffdcfbd753755c9ce530687b8df93c29bced562fe45083da1b",
+      "bbox": [
+        560,
+        226,
+        1274,
+        1080
+      ]
+    },
+    {
+      "index": 180,
+      "source_png_sha256": "f85aef50ab57678d05245c97185d1741e3640575b73ce25e045485f366005704",
+      "file": "wide-180.webp",
+      "bytes": 66228,
+      "sha256": "018d57ec506ed6f6925bfcee1e2fc69a7d06eb2917d17cb98f688bc0fa43ac30",
+      "bbox": [
+        452,
+        222,
+        1353,
+        1080
+      ]
+    },
+    {
+      "index": 240,
+      "source_png_sha256": "1307d8f48e8f54e0e8f9ab2433e8af878edaa49f120e30dfa7a425f857c7d31f",
+      "file": "wide-240.webp",
+      "bytes": 77612,
+      "sha256": "845f724838887de091528979d7a0de381bd93d889920b299fe2d40b5224b38f3",
+      "bbox": [
+        290,
+        214,
+        1488,
+        1080
+      ]
+    },
+    {
+      "index": 300,
+      "source_png_sha256": "7215dda272f5d6aba1e1188d3baf8c5261ddbc4a975037fe68659dcce059f878",
+      "file": "wide-300.webp",
+      "bytes": 141250,
+      "sha256": "2915e2202a38a70c67d75cbc9ef162c54219cb2601016ebda0ba016183523f8e",
+      "bbox": [
+        0,
+        0,
+        1738,
+        1080
+      ]
+    },
+    {
+      "index": 360,
+      "source_png_sha256": "0b9a16df9204edb4d9593828c8186da594d9088596867e23d75a8535bb581d9d",
+      "file": "wide-360.webp",
+      "bytes": 110502,
+      "sha256": "d8c55fd10c64e0e62fa45356d8f16219abfc984f3f3b77022f3c8533701959ac",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ]
+    },
+    {
+      "index": 449,
+      "source_png_sha256": "3d11b60e00e784bc565e68d14037c0b2b90645d8c91e5e406a4e28e3eceb6e6e",
+      "file": "wide-449.webp",
+      "bytes": 102882,
+      "sha256": "324c056d42bdeacecde4fed97bae763eff9e18980f2fdf1ad3c3af5c7d1f2c2d",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ]
+    }
+  ]
+}

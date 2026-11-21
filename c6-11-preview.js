@@ -16,11 +16,8 @@ function update(){
   shown=index;drawCount++;document.body.classList.add('has-film');canvas.dataset.currentFrame=String(shown);
   chapter=chapterFor(shown);panels.forEach((p,i)=>{p.classList.toggle('is-current',i===chapter);p.setAttribute('aria-hidden',String(i!==chapter));});
   // Copy follows the image actually visible, including during reversals and slow networks.
-  document.querySelector('[data-phase]').textContent=['EL SISTEMA','EL ENCENDIDO','HACIA EL NÚCLEO','TRAS EL VIDRIO','EL INTERIOR'][chapter];
-  document.querySelector('[data-frame-label]').textContent=String(shown+1).padStart(3,'0')+' / 450';
  }
  maxGap=Math.max(maxGap,Math.abs(wanted-shown));
- document.querySelector('[data-progress-fill]').style.transform=`scaleX(${progress()})`;
  reel.dataset.progress=String(progress());reel.dataset.chapter=String(chapter+1);
  document.querySelector('[data-loading]').hidden=shown>=0&&Math.abs(wanted-shown)<12;
 }

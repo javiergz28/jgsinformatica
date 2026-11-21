@@ -8,3 +8,29 @@ body.film-static .reel{height:100svh}body.film-static canvas{display:none}body.f
 @media(max-width:850px){.mast{padding:16px 22px}.wordmark{font-size:12px}.wordmark img{width:28px;height:28px}.environment{display:none}.contact{font-size:10px}.reel{height:900svh}.chapter{top:12%;left:22px;width:calc(100% - 44px)}.chapter h1,.chapter h2{font-size:clamp(36px,8.8vw,58px);margin:14px 0}.copy{font-size:13px;max-width:400px;line-height:1.5}.art>*{width:min(108vw,59svh);right:50%;top:auto;bottom:10%;transform:translateX(50%)}.bottom-ui{left:22px;right:22px;bottom:23px;font-size:8px;gap:18px}.scroll-note{max-width:100px;line-height:1.8}.progress-section{width:58%}.loading{right:22px;bottom:85px}.nucleus-end{padding:75px 24px}}
 @media(max-height:660px) and (max-width:850px){.chapter{top:14%}.chapter h1,.chapter h2{font-size:30px;margin:8px 0}.copy{font-size:12px;max-width:270px}.art>*{width:55svh;right:0;bottom:12%;transform:none}.chapter{width:48%;left:18px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reel{height:100svh}.art canvas{display:none!important}.static-poster{opacity:1!important}}
+
+
+/* C6.11-C QA visual: legibility, no decorative progress bar.
+   The underlying 1:1 render cropping is a known blocker for final approval.
+   Broad edge falloff is temporary until the actual camera media is reframed. */
+.chapter{min-height:360px;width:min(42vw,610px);z-index:12;isolation:isolate}
+.chapter:before{content:"";position:absolute;inset:-9vh -5vw -10vh -5vw;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#070b16 0%,#070b16f2 33%,#070b16b8 64%,transparent 100%)}
+.chapter-panel{width:100%;top:0;left:0;bottom:auto;transition:opacity .42s cubic-bezier(.2,.8,.2,1),transform .55s cubic-bezier(.2,.8,.2,1)}
+.chapter-panel.is-current{z-index:2}
+.art{z-index:1}
+.art canvas{mask-image:linear-gradient(90deg,transparent 0%,#0006 17%,#000 43%,#000 100%),linear-gradient(0deg,transparent 0%,#000 11%,#000 93%,transparent 100%);mask-composite:intersect}
+.bottom-ui{z-index:15}
+.progress-section,.track{display:none!important}
+@media(max-width:850px){
+ .chapter{top:13%;min-height:260px;width:calc(100% - 44px)}
+ .chapter:before{inset:-10px -22px -40px -22px;background:linear-gradient(180deg,#070b16 0%,#070b16f0 62%,transparent 100%)}
+ .art canvas{mask-image:linear-gradient(180deg,transparent 0%,#000 8%,#000 89%,transparent 100%);}
+}
+@media(max-height:660px) and (max-width:850px){
+ .chapter{top:13%;width:52%;min-height:250px}
+}
+
+
+/* Active editorial copy must never disappear during a frame/chapter switch. */
+.chapter-panel{transition:transform .38s cubic-bezier(.22,1,.36,1);opacity:0;visibility:hidden}
+.chapter-panel.is-current{opacity:1!important;visibility:visible!important;transform:translateY(0)}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <meta name="theme-color" content="#070b16">
+ <meta name="description" content="JG Next Gen C6.11-C: comparación visual de cámaras. Estudio cinematográfico sin aprobación final.">
+ <title>JG Next Gen · C6.11-C / revisión de cámara</title>
+ <link rel="icon" href="./assets/brand/jg-nextgen-favicon32.png">
+ <link rel="preload" as="image" href="./assets/boot/c6-11-c-study/wide-000.webp" type="image/webp">
+ <link rel="stylesheet" href="./c6-11-c-review.css">
+ <script src="./c6-11-c-review.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#comparacion">Ir a la comparación</a>
+<header class="mast">
+ <a href="./index.html" class="wordmark" aria-label="JG Next Gen - DEV"><img src="./assets/brand/jg-nextgen-flat.svg" width="34" height="34" alt="">JG<span>/</span>NEXT GEN</a>
+ <span class="status">C6.11-C / ESTUDIO DE CÁMARA · NO APROBADO</span>
+ <a href="./c6-11-preview.html" class="back">C6.11 ORIGINAL ↗</a>
+</header>
+<main>
+ <div class="hero">
+  <p class="eyebrow">CHECKPOINT / CORRECCIÓN VISUAL</p>
+  <h1>La cámara debe<br><em>recorrer, no ampliar.</em></h1>
+  <p>Comparación de siete posiciones reales de Blender, antes y después. La nueva cámara desciende mientras se aproxima, con encuadre panorámico y más muestras Cycles. <strong>Esto todavía no es la animación definitiva de 450 fotogramas.</strong></p>
+ </div>
+ <section id="comparacion" class="comparison" aria-labelledby="compare-title">
+  <div class="comparison-heading">
+   <h2 id="compare-title">Comparación de encuadres</h2>
+   <output id="shot-label" for="shot-range">01 / 07 · PC Y BOTÓN</output>
+  </div>
+  <div class="views">
+   <figure class="view">
+    <figcaption>C6.11 · CAMPO CUADRADO / BASELINE NO APROBADO</figcaption>
+    <div class="image-area baseline"><img id="old-shot" src="./assets/boot/c6-11/desktop/core01-000.webp" width="1080" height="1080" alt="Versión anterior en formato cuadrado y cámara rechazada." fetchpriority="high"></div>
+   </figure>
+   <figure class="view">
+    <figcaption>C6.11-C · NUEVO ENCUADRE PANORÁMICO / EN ESTUDIO</figcaption>
+    <div class="image-area candidate"><img id="new-shot" src="./assets/boot/c6-11-c-study/wide-000.webp" width="1920" height="1080" alt="Prueba de cámara real de Blender en formato panorámico, sin aprobación visual." fetchpriority="high"></div>
+   </figure>
+  </div>
+  <label for="shot-range" class="range-label">RECORRER LAS SIETE POSES DE PRUEBA</label>
+  <input id="shot-range" type="range" min="0" max="6" step="1" value="0">
+  <div class="range-ends"><span>INICIO / PC COMPLETA</span><span>FINAL / INTERIOR DEL SISTEMA</span></div>
+  <p class="note">Los cambios del deslizador muestran fotografías de control, no una simulación de fluidez. La futura secuencia debe validar cada uno de sus 450 fotogramas, la calidad y el rendimiento bidireccional antes de reemplazar C6.11.</p>
+ </section>
+ <section class="checks">
+  <p class="eyebrow">RESULTADO G1 · SIN APROBACIÓN FINAL</p>
+  <h2>La revisión continúa.</h2>
+  <div class="stats">
+   <p><strong>0</strong><span>colisiones con piezas sólidas en el nuevo ensayo</span></p>
+   <p><strong>48 cm</strong><span>descenso total de cámara</span></p>
+   <p><strong>32</strong><span>muestras Cycles por pose de ensayo</span></p>
+  </div>
+  <p>El cruce del panel lateral se produce aproximadamente entre los fotogramas 395 y 399. La sincronización de los títulos tendrá que seguir ese punto, y no los capítulos de la cámara anterior.</p>
+  <a href="./c6-11-preview.html">VER C6.11 ACTUAL SIN APROBACIÓN ↗</a>
+ </section>
+</main>
+</body>
+</html>
