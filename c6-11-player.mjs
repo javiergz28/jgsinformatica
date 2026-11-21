@@ -9,7 +9,7 @@ export function priorities(target,direction,radius){
 }
 export class FrameStore{
  constructor({limit,parallel,radius,url,load,onReady}){
-  Object.assign(this,{limit,parallel,radius,url,load,onReady});this.cache=new Map();this.active=new Map();this.queue=[];this.errors=new Set();this.target=0;this.direction=1;this.closed=false;this.peak=0;this.abortCount=0;
+  Object.assign(this,{limit,parallel,radius,url,load,onReady});this.cache=new Map();this.active=new Map();this.queue=[];this.errors=new Set();this.target=0;this.direction=1;this.closed=false;this.peak=0;this.abortCount=0;this.retries=new Map();this.timers=new Set();
  }
  request(target){
   target=clamp(Math.round(target));if(target!==this.target)this.direction=target>this.target?1:-1;this.target=target;
@@ -24,7 +24,7 @@ export class FrameStore{
    Promise.resolve().then(()=>this.load(this.url(i),controller.signal)).then(bitmap=>{
     if(this.closed||controller.signal.aborted||Math.abs(i-this.target)>this.radius+4){bitmap.close?.();return;}
     this.cache.set(i,bitmap);this.prune();this.peak=Math.max(this.peak,this.cache.size);this.onReady();
-   }).catch(error=>{if(error.name!=='AbortError')this.errors.add(i);}).finally(()=>{
+   }).catch(error=>{if(error.name!=='AbortError'){this.errors.add(i);const tries=(this.retries.get(i)||0)+1;this.retries.set(i,tries);if(tries<3){const timer=setTimeout(()=>{this.timers.delete(timer);if(!this.closed){this.errors.delete(i);this.request(this.target);}},1000*tries);this.timers.add(timer);}}}).finally(()=>{
     this.active.delete(i);this.pump();
    });
   }
@@ -37,5 +37,5 @@ export class FrameStore{
   let best=-1;for(const i of this.cache.keys())if(best<0||Math.abs(i-target)<Math.abs(best-target))best=i;
   return best;
  }
- close(){this.closed=true;for(const c of this.active.values())c.abort();for(const b of this.cache.values())b.close?.();this.cache.clear();this.queue=[];}
+ close(){this.closed=true;for(const t of this.timers)clearTimeout(t);this.timers.clear();for(const c of this.active.values())c.abort();for(const b of this.cache.values())b.close?.();this.cache.clear();this.queue=[];}
 }
