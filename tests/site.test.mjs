@@ -115,7 +115,7 @@ test("BOOT and HARDWARE still share focus target but do not claim WebGL navigati
   assert.match(js,/art\.dataset\.handoffPose = hardware\.dataset\.cameraPose/);
   assert.match(js,/No continuous browser 3D\/WebGL is claimed/);
   assert.match(html,/Recorrido CORE-01 actual en revisión/);
-  assert.match(html,/href="\.\/c6-10-preview\.html"/);
+  assert.match(html,/href="\.\/c6-11-preview\.html"/);
 });
 
 test("Cycles sequence is source-backed, WebP optimized, complete and included in Pages deploy", () => {

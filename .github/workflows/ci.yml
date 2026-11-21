@@ -27,7 +27,8 @@ jobs:
         run: |
           node --check script.js
           node --check c6-7-preview.js
-          node --check c6-10-preview.js
+          node --check c6-11-preview.js
+          node --check c6-11-player.mjs
       - name: Test website requirements
         run: node --test tests/*.test.mjs
 
@@ -51,7 +52,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site/assets
-          cp index.html styles.css script.js c6-7-preview.html c6-7-preview.css c6-7-preview.js c6-10-preview.html c6-10-preview.css c6-10-preview.js _site/
+          cp index.html styles.css script.js c6-7-preview.html c6-7-preview.css c6-7-preview.js c6-11-preview.html c6-11-preview.css c6-11-preview.js c6-11-player.mjs _site/
           cp assets/core-01.svg _site/assets/
           mkdir -p _site/assets/brand
           cp assets/brand/jg-nextgen-flat.svg assets/brand/jg-nextgen-favicon32.png _site/assets/brand/
@@ -61,8 +62,8 @@ jobs:
           cp assets/boot/sequence/*.webp _site/assets/boot/sequence/
           mkdir -p _site/assets/boot/c6-7
           cp assets/boot/c6-7/*.webp assets/boot/c6-7/manifest.json _site/assets/boot/c6-7/
-          mkdir -p _site/assets/boot/c6-10-intro
-          cp assets/boot/c6-10-intro/*.webp assets/boot/c6-10-intro/manifest.json _site/assets/boot/c6-10-intro/
+          mkdir -p _site/assets/boot/c6-11
+          cp -R assets/boot/c6-11/desktop assets/boot/c6-11/mobile assets/boot/c6-11/manifest.json _site/assets/boot/c6-11/
           touch _site/.nojekyll
       - name: Configure Pages
         uses: actions/configure-pages@v5
